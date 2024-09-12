@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dropdown Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Logo</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
+            <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+            <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
+            <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
+        </ul>
+
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Contact Admin</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        
+    </div>
+
+
+
+
+
+    <script>
+        const profileLogo = document.getElementById('profile-logo');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        profileLogo.addEventListener('click', () => {
+            // Toggle dropdown visibility
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener('click', (e) => {
+            if (!profileLogo.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
