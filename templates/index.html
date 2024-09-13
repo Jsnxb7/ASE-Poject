@@ -11,7 +11,7 @@
     <header>
         <ul class="nav-links">
             <li><a href="{{ url_for('index') }}">Logo</a></li>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
             <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
             <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
             <li><a href="{{ url_for('research') }}">Research</a></li>
@@ -30,30 +30,10 @@
         </div>
     </header>
 
-    <div>
-        
-    </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 
-
-
-
-    <script>
-        const profileLogo = document.getElementById('profile-logo');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-
-        profileLogo.addEventListener('click', () => {
-            // Toggle dropdown visibility
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Close dropdown if clicked outside
-        window.addEventListener('click', (e) => {
-            if (!profileLogo.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.style.display = 'none';
-            }
-        });
-    </script>
 
 </body>
 </html>
