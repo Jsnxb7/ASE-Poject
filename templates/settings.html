@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Logo</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
+            <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+            <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
+            <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
+        </ul>
+
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('contactadmin') }}">Contact Admin</a>
+                <a href="{{ url_for('login') }}">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Settings Section -->
+    <main>
+        <section class="settings">
+            <h1>Account Settings</h1>
+            <form class="settings-form">
+                <div class="form-group">
+                    <label for="username">Username:</label><button>Change Username</button>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password">Password:</label><button>Change Password</button>
+                </div>
+                <div class="form-group">
+                    <label >Language</label><select name="Language" id="Language">
+                        <option value="volvo">English</option>
+                        <option value="saab">Hindi</option>
+                        <option value="mercedes">German</option>
+                        <option value="audi">Japanese</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notifications">Notifications:</label>
+                    <select id="notifications">
+                        <option value="enabled">Enabled</option>
+                        <option value="disabled">Disabled</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="theme">Theme:</label>
+                    <select id="theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="save-button">Save Changes</button>
+            </form>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
+</body>
+</html>

@@ -7,17 +7,20 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-image: url("https://media.istockphoto.com/id/1409540606/vector/vector-contact-us-pattern-contact-us-seamless-background.jpg?s=612x612&w=0&k=20&c=3djpAIuo9fE9Mr4T7bLIUpEjqU7XaZk4wWt7aMUgU1o=");
     color: #333;
     padding: 20px;
 }
 
 /* Header Styles */
+.opacity{
+    opacity: 0.8;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; /* Updated to white */
+    background-color: rgba(161, 161, 161, 0.838); /* Updated to white */
     padding: 15px;
     border-radius: 10px;
     position: sticky;
@@ -26,11 +29,17 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
 }
 
+.right{
+    align-items: right;
+    text-align: right;
+}
+
 /* Navigation Styles */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    align-items: center; /* Align links with the logo */
 }
 
 .nav-links li a {
@@ -44,9 +53,192 @@ header {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    background-color: #2980b9;
+    background-color: #000000;
     color: white;
 }
+
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 20px; /* Space between logo and navigation links */
+    mix-blend-mode: multiply;
+}
+
+.logo:hover {
+    transform: scale(1.5); /* Slightly less intense hover effect */
+}
+
+
+/* hero section home */
+
+.hero-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+margin-top: 10px;
+color: white;
+}
+
+.left-boxes, .right-boxes {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.hero-box {
+display: flex;      /* Enables Flexbox */
+flex-direction: column; /* Stacks child elements vertically */
+justify-content: center; /* Centers content vertically */
+height: 170px;
+width: 350px;
+text-align: center;
+background-color: #555; /* Slightly lighter shade */
+margin-top: 15px;
+border-radius: 10px;
+}
+
+
+.hero-box.big {
+place-items: center; 
+margin-left: 15px;
+margin-right: 5px;
+height: 538px;
+width: 500px;
+flex-grow: 2;
+text-align: center;
+}
+
+.info-box {   
+display: flex;        /* Enables Flexbox */
+flex-direction: column; /* Stacks child elements vertically */  
+align-items: center;    /* Centers content horizontally */
+justify-content: center; /* Centers content vertically */
+height: 170px;
+width: 350px;
+background-color: #555; /* Even lighter shade */
+margin-bottom: 360px;
+border-radius: 5px;
+text-align: right;
+}
+
+.nav-bot {
+position: fixed;
+bottom: 20px;
+right: 20px;
+text-align: center;
+}
+
+#navBotButton {
+background-color: #007BFF;
+color: white;
+border: none;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+cursor: pointer;
+font-size: 16px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bot-menu {
+height: 290px;
+width: 350px;
+display: none;
+background-color: #555;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+border-radius: 8px;
+position: absolute;
+bottom: 70px;
+right: 20px;
+}
+
+.bot-menu a {
+display: block;
+color: black;
+text-decoration: none;
+padding: 8px;
+text-align: left;
+}
+
+.bot-menu a:hover {
+background-color: #f0f0f0;
+}
+
+
+/* calender */
+
+    .mycalender{
+        height: 70px;
+        width:100%;
+        align-items:center;
+    }
+    .mycalender h1{
+        padding: 10px;
+        color: white;
+    }
+    .calendar {
+        height: 470px;
+        width: 100%;
+        background-color: #726868;
+        border-radius: 0 0 10px 10px ;
+        overflow: hidden;
+        color: white;
+        padding: 20px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .btn {
+        cursor: pointer;
+    }
+    #month-year {
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .weekdays, .days {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .days {
+        height: 240px;
+    }
+    .weekdays div, .days div {
+        width: 14.28%;
+        text-align: center;
+        padding: 20px 0;
+        border-radius: 5px;
+    }
+    .days div {
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .days div:hover {
+        background-color: white;
+        color: orangered;
+    }
+    .days .today {
+        background-color: orangered;
+        color: white;
+    }
+    .days .fade {
+        color: #555;
+    }
+
+
+
+
 
 /* Profile Styles */
 .profile {
@@ -69,10 +261,10 @@ header {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 62px;
     right: 0;
     background-color: #ecf0f1;
-    border-radius: 5px;
+    border-radius: 0 0 7px 7px;
     width: 150px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -96,6 +288,7 @@ header {
 .dropdown-menu a:last-child {
     border-bottom: none;
 }
+
 
 /* Announcement Styles */
 main {
@@ -354,4 +547,284 @@ h1 {
 .assignment-date {
     font-size: 14px;
     color: #555;
+}
+
+/* Contact Admin Page Styles */
+.contact-admin {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-admin h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.contact-admin p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ecf0f1;
+    transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 15px 20px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3498db;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact-admin {
+        padding: 20px;
+    }
+
+    .contact-admin h1 {
+        font-size: 28px;
+    }
+
+    .contact-form label {
+        font-size: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+    }
+}
+
+
+/* Settings Section Styles */
+.settings {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.settings h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ecf0f1;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.save-button {
+    padding: 15px 20px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: center;
+}
+
+.save-button:hover {
+    background-color: #3498db;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .settings {
+        padding: 20px;
+    }
+
+    .settings h1 {
+        font-size: 28px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+    }
+
+    .save-button {
+        font-size: 16px;
+    }
+}
+
+.save-button:hover {
+    background-color: #3498db;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .settings {
+        padding: 20px;
+    }
+
+    .settings h1 {
+        font-size: 28px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+    }
+
+    .save-button {
+        font-size: 16px;
+    }
+}
+/* User Creation Form Styles */
+.user-creation {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-creation h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.user-creation label {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.user-creation input,
+.user-creation select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ecf0f1;
+    transition: border 0.3s ease;
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.user-creation input:focus,
+.user-creation select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.user-creation button {
+    padding: 12px 20px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%; /* Full-width button */
+}
+
+.user-creation button:hover {
+    background-color: #3498db;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
 }

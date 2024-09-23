@@ -14,7 +14,7 @@
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
             <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
-            <li><a href="{{ url_for('research') }}">Research</a></li>
+            <li><a href="{{ url_for('research') }}"class="active">Research</a></li>
             <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
             <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
         </ul>
@@ -22,38 +22,43 @@
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
             <div class="dropdown-menu" id="dropdown-menu">
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
-                <a href="#">Contact Admin</a>
-                <a href="#">Logout</a>
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('contactadmin') }}">Contact Admin</a>
+                <a href="{{ url_for('login') }}">Logout</a>
             </div>
         </div>
     </header>
 
-    <div>
-        
+    <div class="research-container">
+        <h1>Research Projects</h1>
+        <ul class="research-list">
+            <li>
+                <div class="research-title">Project on Advanced Machine Learning Techniques</div>
+                <div class="research-summary">This project explores advanced machine learning algorithms and their applications in predictive analytics.</div>
+                <div class="research-date">Started: 2024-02-01</div>
+            </li>
+            <li>
+                <div class="research-title">IoT-based Smart City Solutions</div>
+                <div class="research-summary">Research on Internet of Things (IoT) technologies aimed at developing smart city solutions for efficient urban management.</div>
+                <div class="research-date">Started: 2024-05-15</div>
+            </li>
+            <li>
+                <div class="research-title">Blockchain Technology for Secure Transactions</div>
+                <div class="research-summary">An investigation into blockchain technology to enhance security and transparency in financial transactions.</div>
+                <div class="research-date">Started: 2024-08-10</div>
+            </li>
+            <li>
+                <div class="research-title">Next-Generation Database Management Systems</div>
+                <div class="research-summary">Study focused on the development and optimization of next-generation DBMS technologies.</div>
+                <div class="research-date">Started: 2024-09-01</div>
+            </li>
+        </ul>
     </div>
 
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
 
 
-
-
-    <script>
-        const profileLogo = document.getElementById('profile-logo');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-
-        profileLogo.addEventListener('click', () => {
-            // Toggle dropdown visibility
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Close dropdown if clicked outside
-        window.addEventListener('click', (e) => {
-            if (!profileLogo.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.style.display = 'none';
-            }
-        });
-    </script>
 
 </body>
 </html>

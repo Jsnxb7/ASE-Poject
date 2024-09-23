@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<div class="form-container">
+    <h1>Update Profile</h1>
+    <form id="profile-form" action="#" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone No.</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="designation">Designation</label>
+        <select id="designation" name="designation" required>
+            <option value="" disabled selected>Select your designation</option>
+            <option value="Professor">Professor</option>
+            <option value="Assistant Professor">Assistant Professor</option>
+            <option value="Associate Professor">Associate Professor</option>
+            <option value="Lecturer">Lecturer</option>
+        </select>
+
+        <label for="role">Role</label>
+        <input type="text" id="role" name="role" placeholder="Enter your role" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea>
+
+        <label for="faculty-id">Faculty ID</label>
+        <input type="text" id="faculty-id" name="faculty-id" placeholder="Enter your Faculty ID" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="form.js"></script>
+
+    <script>
+
+    </script>
+</body>
+</html>

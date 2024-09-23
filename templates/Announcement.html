@@ -16,44 +16,54 @@
             <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
             <li><a href="{{ url_for('research') }}">Research</a></li>
             <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
-            <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
+            <li><a href="{{ url_for('announcement') }}"class="active">Announcements</a></li>
         </ul>
 
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
             <div class="dropdown-menu" id="dropdown-menu">
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
-                <a href="#">Contact Admin</a>
-                <a href="#">Logout</a>
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('contactadmin') }}">Contact Admin</a>
+                <a href="{{ url_for('login') }}">Logout</a>
             </div>
         </div>
     </header>
 
-    <div>
-        
-    </div>
 
+    <main>
+        <section class="announcement-section">
+            <h1>Latest Announcements</h1>
 
+            <div class="announcement">
+                <h2>Important Update: Mid-Term Exam Schedule</h2>
+                <p><strong>Date:</strong> 15th September, 2024</p>
+                <p>The mid-term exams will begin from 20th September. Please check the updated timetable and prepare accordingly. For any queries, contact the admin.</p>
+            </div>
 
+            <div class="announcement">
+                <h2>New Lecture Materials Available</h2>
+                <p><strong>Date:</strong> 10th September, 2024</p>
+                <p>New lecture notes for Data Structures and Database Management have been uploaded. Check the Lectures section for more information.</p>
+            </div>
 
+            <div class="announcement">
+                <h2>Assignment 2 Submission Deadline</h2>
+                <p><strong>Date:</strong> 8th September, 2024</p>
+                <p>Remember to submit your Assignment 2 by 15th September. Late submissions will not be accepted. Check the Assignments section for details.</p>
+            </div>
 
-    <script>
-        const profileLogo = document.getElementById('profile-logo');
-        const dropdownMenu = document.getElementById('dropdown-menu');
+            <div class="announcement">
+                <h2>Workshop on ReactJS</h2>
+                <p><strong>Date:</strong> 5th September, 2024</p>
+                <p>A workshop on ReactJS will be held on 18th September. All students are encouraged to participate. Registration is open now.</p>
+            </div>
 
-        profileLogo.addEventListener('click', () => {
-            // Toggle dropdown visibility
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        });
+        </section>
+    </main>
+    
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
 
-        // Close dropdown if clicked outside
-        window.addEventListener('click', (e) => {
-            if (!profileLogo.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.style.display = 'none';
-            }
-        });
-    </script>
 
 </body>
 </html>

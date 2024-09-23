@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Logo</a></li>
+            <li><a href="{{ url_for('admin_panel') }}"class="active">Admin Panel</a></li>
+        </ul>
+
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('login') }}">Logout</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to the Admin Panel</h1>
+        <p>Manage users and oversee the platform efficiently.</p>
+    </section>
+
+    <!-- User Creation Form -->
+    <section class="user-creation">
+        <h2>Create New User</h2>
+        <form id="createUserForm">
+            <label for="username">Email</label>
+            <input type="text" id="username" placeholder="Enter user's Email" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter user's Password" name="password" required>
+
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+                <option value="admin">Admin</option>
+                <option value="faculty">Faculty</option>
+            </select>
+
+            <label for="fac_id">Faculty ID</label>
+            <input type="text" id="fac_id" placeholder="Enter Faculty ID" name="fac_id" required>
+
+            <button type="submit">Create User</button>
+        </form>
+        <div id="message"></div>
+    </section>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='admin.js') }}"></script>
+
+</body>
+</html>

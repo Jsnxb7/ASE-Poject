@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form>
+            <label for="username">Email</label>
+            <input type="text" id="username" placeholder="Enter your Email" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your Password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>  
+
+        <!-- Admin Panel Button, hidden initially -->
+        <button id="admin-panel-btn" style="display: none;" onclick="window.location.href='/admin'">Go to Admin Panel</button>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='login.js') }}"></script>
+</body>
+</html>

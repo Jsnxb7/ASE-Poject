@@ -13,7 +13,7 @@
             <li><a href="{{ url_for('index') }}">Logo</a></li>
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
-            <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
+            <li><a href="{{ url_for('lectures') }}"class="active">Lectures</a></li>
             <li><a href="{{ url_for('research') }}">Research</a></li>
             <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
             <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
@@ -22,38 +22,42 @@
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
             <div class="dropdown-menu" id="dropdown-menu">
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
-                <a href="#">Contact Admin</a>
-                <a href="#">Logout</a>
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('contactadmin') }}">Contact Admin</a>
+                <a href="{{ url_for('login') }}">Logout</a>
             </div>
         </div>
     </header>
 
-    <div>
-        
+    <div class="lectures-container">
+        <h1>Upcoming Lectures</h1>
+        <ul class="lectures-list">
+            <li>
+                <div class="lecture-date">2024-09-15</div>
+                <div class="lecture-title">Introduction to Advanced DBMS</div>
+                <div class="lecture-details">Instructor: Dr. Smith | Room: 101</div>
+            </li>
+            <li>
+                <div class="lecture-date">2024-09-22</div>
+                <div class="lecture-title">Java Programming Fundamentals</div>
+                <div class="lecture-details">Instructor: Prof. Johnson | Room: 202</div>
+            </li>
+            <li>
+                <div class="lecture-date">2024-10-01</div>
+                <div class="lecture-title">Web Development with React</div>
+                <div class="lecture-details">Instructor: Ms. Lee | Room: 303</div>
+            </li>
+            <li>
+                <div class="lecture-date">2024-10-10</div>
+                <div class="lecture-title">Introduction to IoT</div>
+                <div class="lecture-details">Instructor: Dr. Brown | Room: 404</div>
+            </li>
+        </ul>
     </div>
 
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
 
-
-
-
-    <script>
-        const profileLogo = document.getElementById('profile-logo');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-
-        profileLogo.addEventListener('click', () => {
-            // Toggle dropdown visibility
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Close dropdown if clicked outside
-        window.addEventListener('click', (e) => {
-            if (!profileLogo.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.style.display = 'none';
-            }
-        });
-    </script>
 
 </body>
 </html>

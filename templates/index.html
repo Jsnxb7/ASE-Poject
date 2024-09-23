@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Dropdown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
     <header>
         <ul class="nav-links">
             <li><a href="{{ url_for('index') }}">Logo</a></li>
-            <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+            <li><a href="{{ url_for('index') }}"class="active">Home</a></li>
             <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
             <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
             <li><a href="{{ url_for('research') }}">Research</a></li>
@@ -22,18 +22,78 @@
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
             <div class="dropdown-menu" id="dropdown-menu">
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
-                <a href="#">Contact Admin</a>
-                <a href="#">Logout</a>
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('contactadmin') }}">Contact Admin</a>
+                <a href="{{ url_for('login') }}">Logout</a>
             </div>
         </div>
+        
     </header>
 
+    <section class="hero-section">
+        <div class="left-boxes">
+            <div class="hero-box">
+                <h2>Milestone</h2>
+            </div>
+            <div class="hero-box">
+                <h2>Announcements</h2>
+            </div>
+            <div class="hero-box">
+                <h2>Assignment</h2>
+            </div>
+        </div>
+        <div class="hero-box big">
+        
+            <div class="mycalender">
+                <h1>My Calender</h1>
+            </div>            
+    
+            <div class="calendar">
+                <div class="header">
+                    <div id="prev" class="btn"><i class="fa-solid fa-arrow-left"></i></div>
+                    <div id="month-year"></div>
+                    <div id="next" class="btn"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
+        </div>
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+        <section class="hero-section">
+            <div class="right-boxes">
+                <div class="info-box">
+                    <h2>Punch-In Time</h2>
+                    <h2>Holidays Taken</h2>
+                    <h2>Attendance</h2>
+                    <h2>Holidays Left</h2>
+                </div>
+                <!-- Add more info-boxes if needed -->
+            </div>
+        </section>
+        
+        
+        <div class="nav-bot">
+            <button id="navBotButton">Chat</button>
+            <div class="bot-menu" id="botMenu">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+                <a href="#">Option 4</a>
+            </div>
+        </div>    
 
-
+    </section>
+    
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
 
 </body>
 </html>

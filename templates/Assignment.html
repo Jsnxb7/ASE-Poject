@@ -15,45 +15,48 @@
             <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
             <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
             <li><a href="{{ url_for('research') }}">Research</a></li>
-            <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
+            <li><a href="{{ url_for('assignment') }}"class="active">Assignments</a></li>
             <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
         </ul>
 
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
             <div class="dropdown-menu" id="dropdown-menu">
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
-                <a href="#">Contact Admin</a>
-                <a href="#">Logout</a>
-            </div>
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('contactadmin') }}">Contact Admin</a>
+                <a href="{{ url_for('login') }}">Logout</a>
         </div>
     </header>
 
-    <div>
-        
+    <div class="assignments-container">
+        <h1>Assignments</h1>
+        <ul class="assignments-list">
+            <li>
+                <div class="assignment-title">Database Management System Project</div>
+                <div class="assignment-details">Complete the project on DBMS by implementing a simple database management system.</div>
+                <div class="assignment-date">Due Date: 2024-10-01</div>
+            </li>
+            <li>
+                <div class="assignment-title">Java Programming Assignment</div>
+                <div class="assignment-details">Write a Java program for file handling operations and submit the source code.</div>
+                <div class="assignment-date">Due Date: 2024-10-15</div>
+            </li>
+            <li>
+                <div class="assignment-title">Web Development Challenge</div>
+                <div class="assignment-details">Create a responsive website with HTML, CSS, and JavaScript, and ensure it is cross-browser compatible.</div>
+                <div class="assignment-date">Due Date: 2024-11-01</div>
+            </li>
+            <li>
+                <div class="assignment-title">IoT Research Paper</div>
+                <div class="assignment-details">Research and write a paper on the latest trends in Internet of Things (IoT) technology.</div>
+                <div class="assignment-date">Due Date: 2024-11-15</div>
+            </li>
+        </ul>
     </div>
+    
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
 
-
-
-
-
-    <script>
-        const profileLogo = document.getElementById('profile-logo');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-
-        profileLogo.addEventListener('click', () => {
-            // Toggle dropdown visibility
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Close dropdown if clicked outside
-        window.addEventListener('click', (e) => {
-            if (!profileLogo.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.style.display = 'none';
-            }
-        });
-    </script>
 
 </body>
 </html>
