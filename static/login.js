@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (result.success) {
                 // Store user role in localStorage
                 localStorage.setItem('userRole', result.role);
-                
+
                 // Check the user's role and redirect accordingly
                 if (result.role === 'admin') {
                     // Redirect to the admin panel if the user is an admin

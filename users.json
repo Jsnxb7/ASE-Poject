@@ -1,0 +1,14 @@
+[
+    {
+        "email": "admin@example.com",
+        "password": "scrypt:32768:8:1$cdWoLg7J1BqdrYc4$ee98d9d02450cd3b7d485a96ced03634b5f0272c16945275111d4ae541144e22c60abf059d6278b89e67cd0081080fc8a0a05baac9c2014ffea70241f0803dc8",
+        "role": "admin",
+        "fac_id": "ADM001"
+    },
+    {
+        "email": "fac1@example.com",
+        "password": "scrypt:32768:8:1$k4U9GBfvQvuP1Tjn$275391d114b4c2155c61a30526b90b407df9085c0e88d061dc8e084c5349944f94f6f73625c13396638087f81dc51ba046341e6fe9be9c556952671d82af62f8",
+        "role": "faculty",
+        "fac_id": "FAC001"
+    }
+]

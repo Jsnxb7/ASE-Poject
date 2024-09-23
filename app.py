@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, redirect, url_for, render_template, make_response
 from werkzeug.security import check_password_hash, generate_password_hash
-from pymongo import MongoClient
+import os
+import json
 from functools import wraps
 
 #pass = hello16
@@ -12,15 +13,24 @@ app = Flask(__name__)
 def login():
     return render_template('login.html')
 
-client = MongoClient('mongodb://localhost:27017/')
-db = client['faculty']
-users_collection = db['fac_list']
-
 @app.route('/admin', methods=['GET'])
 def admin_panel():
     return render_template('admin_panel.html')
 
 # Make it from MongoDB to Json
+
+
+# Load users from the JSON file
+def load_users():
+    if not os.path.exists('users.json'):
+        return []
+    with open('users.json', 'r') as f:
+        return json.load(f)
+
+# Save users to the JSON file
+def save_users(users):
+    with open('users.json', 'w') as f:
+        json.dump(users, f, indent=4)
 
 @app.route('/admin/create_user', methods=['POST'])
 def create_user():
@@ -28,33 +38,39 @@ def create_user():
     username = data.get('username')
     password = data.get('password')
     role = data.get('role')
-    fac_id = data.get('fac_id')  # Get fac_id from the request
+    fac_id = data.get('fac_id')
 
     if not username or not password or not role or not fac_id:
         return jsonify({'success': False, 'message': 'Missing required fields'}), 400
 
     hashed_password = generate_password_hash(password)
 
-    # Insert new user into MongoDB
-    users_collection.insert_one({
-        'email': username,
-        'password': hashed_password,
-        'role': role,
-        'fac_id': fac_id
-    })
+    # Create or reference the user data JSON file based on fac_id
+    user_data_filename = f"{fac_id}_user_data.json"
+    user_data_path = os.path.join(user_data_filename)
 
-    # Create or reference the collection based on fac_id
-    collection_name = f"posts_{fac_id}"
-    user_posts_collection = db[collection_name]
+    # Check if the file already exists
+    if not os.path.exists(user_data_path):
+        # Create a new JSON file with an empty user list
+        with open(user_data_path, 'w') as json_file:
+            json.dump({'users': []}, json_file)  # Use 'users' as the key for the list
 
-    # Insert initial data into the user's posts collection
-    initial_data = {
+    # Load existing user data
+    with open(user_data_path, 'r') as json_file:
+        user_data = json.load(json_file)
+
+    # Add the new user to the user data
+    new_user = {
         'email': username,
         'password': hashed_password,
         'role': role,
         'fac_id': fac_id
     }
-    user_posts_collection.insert_one(initial_data)
+    user_data['users'].append(new_user)
+
+    # Save the updated user data back to the JSON file
+    with open(user_data_path, 'w') as json_file:
+        json.dump(user_data, json_file)
 
     return jsonify({'success': True, 'message': 'User created successfully'}), 201
 
@@ -64,7 +80,11 @@ def login1():
     username = data.get('username')
     password = data.get('password')
 
-    user = users_collection.find_one({'email': username})
+    # Load users from the JSON file
+    users = load_users()
+
+    # Find the user in the JSON data
+    user = next((u for u in users if u['email'] == username), None)
 
     if user and check_password_hash(user['password'], password):
         # Include the user role in the response
