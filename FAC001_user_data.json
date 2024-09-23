@@ -1,1 +1,10 @@
-{"users": [{"email": "fac1@example.com", "password": "scrypt:32768:8:1$hermVrh8p5UH1wjC$04cff3b479a5cf860a0e1d9812a24615e677b795e5006e6c120a6541be2822d141e81c2d96a56e6c2057269cfa099244268b60e86c0df7ce07bf7ad3afb5bda4", "role": "faculty", "fac_id": "FAC001"}]}
+{
+    "users": [
+        {
+            "email": "fac1@example.com",
+            "password": "scrypt:32768:8:1$VQU2XZJQXkFBNa7I$df8e1b79cac6b906fc9a1d84d262a8e5bb0edabe9a432553d96143c04621d2cf41e1683b60738a33faa70b37c45a3742264abc987e2a2f4dc227a03ab24aa48b",
+            "role": "faculty",
+            "fac_id": "FAC001"
+        }
+    ]
+}

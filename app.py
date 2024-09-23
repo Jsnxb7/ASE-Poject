@@ -20,14 +20,15 @@ def admin_panel():
 # Load users from the JSON file
 def load_users():
     if not os.path.exists('users.json'):
-        return []
+        return {'users': []}  # Return an empty dictionary with a 'users' key
     with open('users.json', 'r') as f:
         return json.load(f)
 
 # Save users to the JSON file
 def save_users(users):
     with open('users.json', 'w') as f:
-        json.dump(users, f, indent=4)
+        json.dump({'users': users}, f, indent=4)  # Save the 'users' key
+
 
 @app.route('/admin/create_user', methods=['POST'])
 def create_user():
@@ -42,34 +43,47 @@ def create_user():
 
     hashed_password = generate_password_hash(password)
 
-    # Create or reference the user data JSON file based on fac_id
-    user_data_filename = f"{fac_id}_user_data.json"
-    user_data_path = os.path.join(user_data_filename)
+    # Load existing user data from the main JSON file
+    user_data = load_users()
+    users = user_data.get('users', [])
 
-    # Check if the file already exists
-    if not os.path.exists(user_data_path):
-        # Create a new JSON file with an empty user list
-        with open(user_data_path, 'w') as json_file:
-            json.dump({'users': []}, json_file)  # Use 'users' as the key for the list
+    # Check if the user already exists
+    if any(u['email'] == username for u in users):
+        return jsonify({'success': False, 'message': 'User already exists'}), 400
 
-    # Load existing user data
-    with open(user_data_path, 'r') as json_file:
-        user_data = json.load(json_file)
-
-    # Add the new user to the user data
+    # Add the new user to the list
     new_user = {
         'email': username,
         'password': hashed_password,
         'role': role,
         'fac_id': fac_id
     }
-    user_data['users'].append(new_user)
+    users.append(new_user)
 
-    # Save the updated user data back to the JSON file
-    with open(user_data_path, 'w') as json_file:
-        json.dump(user_data, json_file)
+    # Save the updated user data back to the main JSON file
+    save_users(users)
+
+    # Create a new JSON file for the user based on fac_id
+    user_data_filename = f"{fac_id}_user_data.json"
+    
+    # Create or reference the user data JSON file
+    if not os.path.exists(user_data_filename):
+        with open(user_data_filename, 'w') as json_file:
+            json.dump({'users': []}, json_file)  # Initialize with an empty user list
+
+    # Load existing user data from the fac_id specific file
+    with open(user_data_filename, 'r') as json_file:
+        fac_user_data = json.load(json_file)
+
+    # Append the new user to the specific fac_id file
+    fac_user_data['users'].append(new_user)
+
+    # Save the updated user data back to the fac_id specific JSON file
+    with open(user_data_filename, 'w') as json_file:
+        json.dump(fac_user_data, json_file, indent=4)
 
     return jsonify({'success': True, 'message': 'User created successfully'}), 201
+
 
 @app.route('/login1', methods=['POST'])
 def login1():
@@ -78,7 +92,8 @@ def login1():
     password = data.get('password')
 
     # Load users from the JSON file
-    users = load_users()
+    users_data = load_users()
+    users = users_data.get('users', [])  # Get the list of users from the dictionary
 
     # Find the user in the JSON data
     user = next((u for u in users if u['email'] == username), None)

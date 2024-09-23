@@ -1,14 +1,22 @@
-[
-    {
-        "email": "admin@example.com",
-        "password": "scrypt:32768:8:1$cdWoLg7J1BqdrYc4$ee98d9d02450cd3b7d485a96ced03634b5f0272c16945275111d4ae541144e22c60abf059d6278b89e67cd0081080fc8a0a05baac9c2014ffea70241f0803dc8",
-        "role": "admin",
-        "fac_id": "ADM001"
-    },
-    {
-        "email": "fac1@example.com",
-        "password": "scrypt:32768:8:1$k4U9GBfvQvuP1Tjn$275391d114b4c2155c61a30526b90b407df9085c0e88d061dc8e084c5349944f94f6f73625c13396638087f81dc51ba046341e6fe9be9c556952671d82af62f8",
-        "role": "faculty",
-        "fac_id": "FAC001"
-    }
-]
+{
+    "users": [
+        {
+            "email": "admin@example.com",
+            "password": "scrypt:32768:8:1$Q8bZdVc1c7L9lmQX$b72a8e57162e91d6a0cfa54105ef047f182b3103ed0b2698acb623f55642d0dbdba71066330fd094d2ba9eeda0f374f81ae05cf41da7e2ba23e46e6021eec599",
+            "role": "admin",
+            "fac_id": "ADM001"
+        },
+        {
+            "email": "fac1@example.com",
+            "password": "scrypt:32768:8:1$VQU2XZJQXkFBNa7I$df8e1b79cac6b906fc9a1d84d262a8e5bb0edabe9a432553d96143c04621d2cf41e1683b60738a33faa70b37c45a3742264abc987e2a2f4dc227a03ab24aa48b",
+            "role": "faculty",
+            "fac_id": "FAC001"
+        },
+        {
+            "email": "fac2@example.com",
+            "password": "scrypt:32768:8:1$yd0ms2zBVwmCe6sU$09e715f409869bc34ddb0d19a7ccdbde0dff991594be1bf5c3863b319afb9bf07ef0063e40bb86a052c540ae739b4d032da532d433ec73bdf037a9d002456285",
+            "role": "faculty",
+            "fac_id": "FAC002"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+{"users": [{"email": "admin@example.com", "password": "scrypt:32768:8:1$Q8bZdVc1c7L9lmQX$b72a8e57162e91d6a0cfa54105ef047f182b3103ed0b2698acb623f55642d0dbdba71066330fd094d2ba9eeda0f374f81ae05cf41da7e2ba23e46e6021eec599", "role": "admin", "fac_id": "ADM001"}]}
