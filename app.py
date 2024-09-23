@@ -17,9 +17,6 @@ def login():
 def admin_panel():
     return render_template('admin_panel.html')
 
-# Make it from MongoDB to Json
-
-
 # Load users from the JSON file
 def load_users():
     if not os.path.exists('users.json'):

@@ -19,17 +19,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const daysContainer = document.getElementById('days');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
-
+    const popup = document.getElementById('popup');
+    const popupContent = document.querySelector('.popup-content');
+    const closePopup = document.getElementById('close-popup');
+    const selectedDay = document.getElementById('selected-day');
 
     const months = [
         'January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December'
     ];
 
-
     let currentDate = new Date();
     let today = new Date();
-
 
     function renderCalendar(date) {
         const year = date.getFullYear();
@@ -37,10 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const firstDay = new Date(year, month, 1).getDay();
         const lastDay = new Date(year, month + 1, 0).getDate();
 
-
         monthYear.textContent = `${months[month]} ${year}`;
         daysContainer.innerHTML = '';
-
 
         // Previous month's dates
         const prevMonthLastDay = new Date(year, month, 0).getDate();
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
             daysContainer.appendChild(dayDiv);
         }
 
-
         // Current month's dates
         for (let i = 1; i <= lastDay; i++) {
             const dayDiv = document.createElement('div');
@@ -59,9 +57,16 @@ document.addEventListener('DOMContentLoaded', function () {
             if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
                 dayDiv.classList.add('today');
             }
+
+            // Add click event to open popup
+            dayDiv.addEventListener('click', function () {
+                selectedDay.textContent = `${months[month]} ${i}, ${year}`;
+                popup.classList.add('show');
+                popupContent.classList.add('show');
+            });
+
             daysContainer.appendChild(dayDiv);
         }
-
 
         // Next month's dates
         const nextMonthStartDay = 7 - new Date(year, month + 1, 0).getDay() - 1;
@@ -71,23 +76,33 @@ document.addEventListener('DOMContentLoaded', function () {
             dayDiv.classList.add('fade');
             daysContainer.appendChild(dayDiv);
         }
-
-
-        
     }
 
-
+    // Handle previous and next month buttons
     prevButton.addEventListener('click', function () {
         currentDate.setMonth(currentDate.getMonth() - 1);
         renderCalendar(currentDate);
     });
-
 
     nextButton.addEventListener('click', function () {
         currentDate.setMonth(currentDate.getMonth() + 1);
         renderCalendar(currentDate);
     });
 
+    // Close popup when clicking "X"
+    closePopup.addEventListener('click', function () {
+        popup.classList.remove('show');
+        popupContent.classList.remove('show');
+    });
 
+    // Close popup when clicking outside of the popup content
+    window.addEventListener('click', function (event) {
+        if (event.target === popup) {
+            popup.classList.remove('show');
+            popupContent.classList.remove('show');
+        }
+    });
+
+    // Render the initial calendar
     renderCalendar(currentDate);
 });
