@@ -106,3 +106,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // Render the initial calendar
     renderCalendar(currentDate);
 });
+
+
+// Example JavaScript to dynamically update progress
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBar = document.getElementById('progressBar');
+    let progress = 75; // Suppose this value is dynamic
+
+    progressBar.querySelector('.progress').style.width = progress + '%';
+    progressBar.querySelector('.progress').textContent = progress + '% Complete';
+});
+
+
+// Add event listeners to circles for toggling completion class
+    document.addEventListener('DOMContentLoaded', function() {
+        const circles = document.querySelectorAll('.circle');
+        circles.forEach(circle => {
+            circle.addEventListener('click', function() {
+                this.classList.toggle('completed');
+            });
+        });
+    });

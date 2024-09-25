@@ -7,15 +7,12 @@
 }
 
 body {
-    background-image: url("https://media.istockphoto.com/id/1409540606/vector/vector-contact-us-pattern-contact-us-seamless-background.jpg?s=612x612&w=0&k=20&c=3djpAIuo9fE9Mr4T7bLIUpEjqU7XaZk4wWt7aMUgU1o=");
+    background-image: url(https://media.istockphoto.com/id/1409540606/vector/vector-contact-us-pattern-contact-us-seamless-background.jpg?s=612x612&w=0&k=20&c=3djpAIuo9fE9Mr4T7bLIUpEjqU7XaZk4wWt7aMUgU1o=);
     color: #333;
     padding: 20px;
 }
 
 /* Header Styles */
-.opacity{
-    opacity: 0.8;
-}
 header {
     display: flex;
     justify-content: space-between;
@@ -77,6 +74,10 @@ header {
 }
 
 
+
+
+
+
 /* hero section home */
 
 .hero-section {
@@ -84,7 +85,6 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 10px;
-margin-top: 10px;
 color: white;
 }
 
@@ -94,8 +94,25 @@ flex-direction: column;
 justify-content: space-between;
 }
 
+.button-hero{
+    padding: 5px 10px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: center;
+}
+
+.button-hero a{
+text-decoration: none;
+color: white;
+}
+
 .hero-box {
-display: flex;      /* Enables Flexbox */
+display: flex;        /* Enables Flexbox */
 flex-direction: column; /* Stacks child elements vertically */
 justify-content: center; /* Centers content vertically */
 height: 170px;
@@ -112,7 +129,7 @@ place-items: center;
 margin-left: 15px;
 margin-right: 5px;
 height: 538px;
-width: 500px;
+width: 700px;
 flex-grow: 2;
 text-align: center;
 }
@@ -125,8 +142,8 @@ justify-content: center; /* Centers content vertically */
 height: 170px;
 width: 350px;
 background-color: #555; /* Even lighter shade */
-margin-bottom: 360px;
-border-radius: 5px;
+margin-bottom: 350px;
+border-radius: 10px;
 text-align: right;
 }
 
@@ -150,7 +167,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .bot-menu {
-height: 290px;
+height: 320px;
 width: 350px;
 display: none;
 background-color: #555;
@@ -178,7 +195,7 @@ background-color: #f0f0f0;
 
     .mycalender{
         height: 70px;
-        width:100%;
+        width: 1100px;
         align-items:center;
     }
     .mycalender h1{
@@ -235,6 +252,54 @@ background-color: #f0f0f0;
     .days .fade {
         color: #555;
     }
+
+    
+.progress-container {
+    width: 100%;
+    height:100% ;
+    padding: 20px;
+    background-color: #555;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.progress-container h1{
+    color: white;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    background-color: #4CAF50;
+    color: white;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.module-circles {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+.completed {
+    background-color: #4CAF50;
+}
+
 
 
 
@@ -738,131 +803,185 @@ h1 {
     }
 }
 
-.save-button:hover {
-    background-color: #3498db;
-}
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .settings {
-        padding: 20px;
-    }
+/* Research PAGE CSS */
 
-    .settings h1 {
-        font-size: 28px;
-    }
-
-    .form-group label {
-        font-size: 16px;
-    }
-
-    .form-group input,
-    .form-group select {
-        font-size: 14px;
-    }
-
-    .save-button {
-        font-size: 16px;
-    }
-}
-/* User Creation Form Styles */
-.user-creation {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: white;
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added to position the close button */
+}
+.close-btn {
+    position: absolute; /* Position it relative to the container */
+    top: 10px; /* Adjust for spacing */
+    right: 10px; /* Adjust for spacing */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
 }
 
-.user-creation h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #2c3e50;
+.close-btn:hover {
+    color: #ff0000;
+}
+
+h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.user-creation label {
-    font-size: 16px;
-    color: #2c3e50;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
 
-.user-creation input,
-.user-creation select {
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 10px;
     border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #ecf0f1;
-    transition: border 0.3s ease;
-    margin-bottom: 15px; /* Space between fields */
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.user-creation input:focus,
-.user-creation select:focus {
-    border-color: #2980b9;
-    outline: none;
+.form-group input[type="file"] {
+    border: none;
 }
 
-.user-creation button {
-    padding: 12px 20px;
-    background-color: #2980b9;
+/* Button styles */
+.toggle-btn {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn.active {
+    background-color: #4CAF50; /* Active color */
     color: white;
-    font-size: 18px;
+    border: 1px solid #4CAF50;
+}
+
+/* Two-column layout for date and funding fields */
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between items */
+}
+
+.form-row .form-group {
+    flex: 1; /* Allow form groups to grow equally */
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
-    width: 100%; /* Full-width button */
-}
-
-.user-creation button:hover {
-    background-color: #3498db;
-}
-
-#message {
-    margin-top: 15px;
     font-size: 16px;
-    text-align: center;
+    margin-top: 10px;
 }
-/* Popup styles */
-.popup {
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+.container_research {
+    height: 550px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    background-color: rgb(0, 136, 255);
+    position: relative;
+}
+
+.container1_research {
+    width: 40%;
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container2_research {
+    flex: 1;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.research_box1 {
+    background-color: pink;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.research_box1 h2 {
+    color: black;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.button_research {
+    background-color: blueviolet;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button_class {
+    display: flex; /* Use flex for button alignment */
+    justify-content: space-between;
+    width: 350px;
+}
+
+.modal {
     display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Set a higher z-index */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    opacity: 0; /* Initially transparent */
-    transition: opacity 0.5s ease; /* Smooth transition for the opacity */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background color */
 }
 
-.popup-content {
-    background-color: white;
-    margin: 15% auto;
+.modal-content {
+    margin:  auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(-20px); /* Slightly up for animation */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for fade and movement */
-}
-
-/* When the popup is shown, change its opacity and transform */
-.popup.show {
-    display: block; /* Make visible */
-    opacity: 1; /* Fully opaque */
-}
-
-.popup-content.show {
-    opacity: 1; /* Fade in the content */
-    transform: translateY(0); /* Move to its original position */
+    width: 80%; /* Could be more or less, depending on screen size */
 }
 
 .close {
@@ -878,3 +997,20 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
+
+.research_box {
+    border: 1px solid black;
+    height: 122px;
+    background-color: blueviolet;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+
+
+

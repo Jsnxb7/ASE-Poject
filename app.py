@@ -30,7 +30,6 @@ def save_users(users):
     with open('users.json', 'w') as f:
         json.dump({'users': users}, f, indent=4)  # Save the 'users' key
 
-
 @app.route('/admin/create_user', methods=['POST'])
 def create_user():
     data = request.json
@@ -84,7 +83,6 @@ def create_user():
         json.dump(fac_user_data, json_file, indent=4)
 
     return jsonify({'success': True, 'message': 'User created successfully'}), 201
-
 
 @app.route('/login1', methods=['POST'])
 def login1():
@@ -146,6 +144,10 @@ def profile():
 @app.route('/settings')
 def settings():
     return render_template("settings.html") 
+
+@app.route('/registration')
+def registration():
+    return render_template("registration.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
