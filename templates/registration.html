@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dropdown Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <style>
+        /* Registration Form */
+
+
+        .container_form {
+            height: 570px;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex; /* Aligns children in a row */
+        }
+        .face_container {
+            width: 40%; /* Adjusted width */
+            background-color: white;
+            border: 1px solid rgb(180, 180, 180);
+            border-radius: 15px 0 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .face_conatiner_1{
+            width: 95%;
+            height: 95%;
+            background-color: #2980b9;
+            border-radius: 10px ;
+        }
+
+        .face_registraion_form_conatiner {
+            border: 1px solid rgb(180, 180, 180);
+            border-radius: 0  15px 15px 0;
+            width: 60%; /* Adjusted width */
+            background-color: rgb(255, 255, 255);
+            padding: 20px; /* Add padding */
+            color: rgb(0, 0, 0); /* Text color */
+        }
+        form {
+            display: flex;
+            flex-direction: column; /* Stack form elements */
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between; /* Distribute space between items */
+            
+        }
+        .form-group {
+            width: 98%; /* Make groups take up almost half the width */
+            margin-left: 10px;
+        }
+        .address_name{
+            margin: 10px;
+        }
+        label {
+            display: block; /* Ensure labels are above inputs */
+            margin-top: 5p
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 10px;
+            border: 1px solid rgb(206, 206, 206);
+            border-radius: 5px;
+            width: 100%; /* Make inputs full width */
+        }
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9; /* Button background */
+            color: white; /* Button text color */
+            cursor: pointer; /* Pointer cursor */
+        }
+        button:hover {
+            background-color: #2676ac; /* Hover effect */
+        }
+
+        h2{
+            padding: 12px;
+            font-size: 20px
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+        <ul class="nav-links">
+            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1726272000&semt=ais_hybrid" alt="" class="logo" id="logo">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Milestone.html">Milestone</a></li>
+            <li><a href="Lectures.html">Lectures</a></li>
+            <li><a href="Research.html">Research</a></li>
+            <li><a href="Assignment.html">Assignments</a></li>
+            <li><a href="Announcement.html">Announcements</a></li>
+            <li><a href="registraion.html" class="active">Registration</a></li>
+        </ul>
+
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="profile.html">Profile</a>
+                <a href="setting.html">Settings</a>
+                <a href="Contactadmin.html">Contact Admin</a>
+                <a href="login.html">Logout</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <div class="container_form">
+        <div class="face_container">
+            <div class="face_conatiner_1">
+            </div>
+        </div>
+        <div class="face_registraion_form_conatiner">
+            
+                <center><h2>Registration Form</h2></center>
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="faculty-id">Faculty ID:</label>
+                            <input type="text" id="faculty-id" name="faculty-id" required placeholder="Faculty-ID">
+                        </div>
+                    </div>
+            
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Phone no.">
+                        </div>
+                    </div>
+                    <div class="address_name">
+                        <center><h2>Address</h2></center>
+                    </div> 
+
+                    <div class="form-row">
+                    <div class="form-group">
+                        <label for="address">Flat/House No/Floor/Building:</label>
+                        <input type="text" id="address" name="address" required placeholder="Flat No. / House No. / Floor / Building">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="landmark">Nearby Landmark (optional):</label>
+                        <input type="text" id="landmark" name="landmark" placeholder="Landmark">
+                    </div>
+                    
+                    </div>
+            
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="state">State/Province:</label>
+                            <input type="text" id="state" name="state" required placeholder="State">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required placeholder="City">
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Zip/Postal Code:</label>
+                            <input type="text" id="zip" name="zip" required placeholder="Zip/Postal code">
+                        </div>
+                    </div>
+            
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+
+        
+    </div>
+    
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
+
+</body>
+</html>
