@@ -19,7 +19,6 @@
             "fac_id": "FAC002"
         },
         {
-<<<<<<< Updated upstream
             "email": "fac3@example.com\"",
             "password": "scrypt:32768:8:1$fA0M4KysZvfmzAjk$5c9d6d290359289e394657ac217b028d38665a6f2d0b4266916d700fa1fb1d07041c9c87d563979b742efa5b91935b4c2901c0fb6578eac9481795acd0a402f3",
             "role": "faculty",
@@ -456,7 +455,10 @@
             "password": "scrypt:32768:8:1$oVE6UATZ2kUaBAsk$63fa0a449215c06215907b4c019f354a62bceb8dcdea5dbb446ace2e0459637853a4b3ca6013e3220617f787239dd64877f5ada72e01b9ab8f8a08e0b16da702",
             "role": "faculty",
             "fac_id": "FAC0075"
-=======
+
+        
+        },
+        {
             "email": "fac76@example.com",
             "password": "scrypt:32768:8:1$mvf7NOYK7CmndauJ$47379ad3f84d5f07ca77d5ca2e9a52fd1eceabc0cffcfd2bac91fe9efb078df6b449359cdd7bee9e14786c9f3cceb9bf34de6223018920bf938b2f73225b3d4e",
             "role": "faculty",
@@ -905,7 +907,6 @@
             "password": "scrypt:32768:8:1$F9iwQDXc7pYXWmJP$22656270899aa7f3318fc80ae3c493d07003bebce1540f5a0ed5096518c0df6a1d2ce75a10474d73c362c6ca1629b87d29588b13649be6f78f5fbac3cfd7614b",
             "role": "faculty",
             "fac_id": "FAC00150"
->>>>>>> Stashed changes
         }
     ]
 }
