@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "email": " fac89@example.com",
+            "password": "scrypt:32768:8:1$mI7jrt9zlKU0ZHfO$e724862173a3ea5d7207ac510bff55f90895b5b406103e9a82ce5b56b1208d4224505c56bf39052e9fa743289771a09aaf8d97d3f913a707c1410cc9060e5fa0",
+            "role": "faculty",
+            "fac_id": "FAC0089"
+        }
+    ]
+}

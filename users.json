@@ -19,6 +19,7 @@
             "fac_id": "FAC002"
         },
         {
+<<<<<<< Updated upstream
             "email": "fac3@example.com\"",
             "password": "scrypt:32768:8:1$fA0M4KysZvfmzAjk$5c9d6d290359289e394657ac217b028d38665a6f2d0b4266916d700fa1fb1d07041c9c87d563979b742efa5b91935b4c2901c0fb6578eac9481795acd0a402f3",
             "role": "faculty",
@@ -455,6 +456,456 @@
             "password": "scrypt:32768:8:1$oVE6UATZ2kUaBAsk$63fa0a449215c06215907b4c019f354a62bceb8dcdea5dbb446ace2e0459637853a4b3ca6013e3220617f787239dd64877f5ada72e01b9ab8f8a08e0b16da702",
             "role": "faculty",
             "fac_id": "FAC0075"
+=======
+            "email": "fac76@example.com",
+            "password": "scrypt:32768:8:1$mvf7NOYK7CmndauJ$47379ad3f84d5f07ca77d5ca2e9a52fd1eceabc0cffcfd2bac91fe9efb078df6b449359cdd7bee9e14786c9f3cceb9bf34de6223018920bf938b2f73225b3d4e",
+            "role": "faculty",
+            "fac_id": "FAC0076"
+        },
+        {
+            "email": "fac77@example.com",
+            "password": "scrypt:32768:8:1$4JfI8FHO2hzpech3$4e8f01a9a4da2072c0577343ec1eaa15472a3ddc380a01ac493cbae346a24f74ca1e8604128b6bde3e61014d7dbfebe6f8824019b7656b328d85f08e36ffe6c3",
+            "role": "faculty",
+            "fac_id": "FAC0077"
+        },
+        {
+            "email": "fac78@example.com",
+            "password": "scrypt:32768:8:1$LgdNSxKP1AlWcb1F$8eb813898a09e1b5b92041287b7d88fa89b5202c5e4eedbad444c60259d3755951cec790ee077057b3aa1f0e4c36faa9ce1239352a4a0da38ed44309c08e7a22",
+            "role": "faculty",
+            "fac_id": "FAC0078"
+        },
+        {
+            "email": "fac79@example.com",
+            "password": "scrypt:32768:8:1$C2Ut6dAmfaRM2kkX$147ecf87dacba7fbc4e7599e5c4858b8cba0ddd6da8d5c807d2aeed9f69ec1cca3475cde7ebe2e0bb2d098f7456fa8fe734ed0ba40372d20c4f0653c0d484906",
+            "role": "faculty",
+            "fac_id": "FAC0079"
+        },
+        {
+            "email": "fac80@example.com",
+            "password": "scrypt:32768:8:1$T1qXhUYFe2wPnPFB$7363362d8415896a2eee5f96079cedd94c2683abd62c7af2de09519e86e96ea906e72b53587625fa56dfd867719fa9455b6c60e23e28cc30a3d9635b2126b4b3",
+            "role": "faculty",
+            "fac_id": "FAC0080"
+        },
+        {
+            "email": "fac81@example.com",
+            "password": "scrypt:32768:8:1$DuIzR8rP7QPa7xm1$6450f4b78ccee51c3e5e5dba3c8c9ba871c4194b4d43fb6391d470b1af9906b8d5068cdda102e0ad70bf35fb9799d0157fde79ea6f2f8fe36721c67697778868",
+            "role": "faculty",
+            "fac_id": "FAC0081"
+        },
+        {
+            "email": "fac82@example.com",
+            "password": "scrypt:32768:8:1$jNSafFb2X6t6HQRv$3078cabd6c9e2c24e6d80274c291fc7c6d9c78910a58055cb7dae4f62cf36f1ed68429e1bc1d5920565b0d59b97cdc4b89cc1d7f1b9579155f379186a3e763ff",
+            "role": "faculty",
+            "fac_id": "FAC0082"
+        },
+        {
+            "email": "fac83@example.com",
+            "password": "scrypt:32768:8:1$8fiOXYwhymhsK4sz$b4e376c7383381bbdf043217a0bf01a422d64e85da3ca5e647313c5278824dcabe561e459e97a4c147dbc9d8b3f5d7884fe50b2d78f65793c95e348c9b0af741",
+            "role": "faculty",
+            "fac_id": "FAC0083"
+        },
+        {
+            "email": "fac84@example.com",
+            "password": "scrypt:32768:8:1$sxI7euqz6HcVcxRU$077f689cb4ff761ed427afa4d6f11df45ee93cb413b58f858793fea6921480fdaa3657314b0d385989f672162e716227a5a4c7a1208a5200cd29c16cd8ae4364",
+            "role": "faculty",
+            "fac_id": "FAC0084"
+        },
+        {
+            "email": "fac85@example.com",
+            "password": "scrypt:32768:8:1$o3MmlFKhg6nZlPgv$e154b6eda3808fa7c872374445b81313544de85ed19eacf08f81006ddcd91a414e151b59e46bdcebb9fdec4da63262c2f30eb907225d8306b6bbe5d10cf9a91a",
+            "role": "faculty",
+            "fac_id": "FAC0085"
+        },
+        {
+            "email": "fac86@example.com",
+            "password": "scrypt:32768:8:1$hjItkVWw05SX6VSD$6235201eb27d161427ad4eb95db31cd34361492d3744fb151cf8dbc954cb166320c639214307b8135bccbb212ff25f7f393f7eb2967597a91b9148c56a6ee51a",
+            "role": "faculty",
+            "fac_id": "FAC0086"
+        },
+        {
+            "email": "fac87@example.com",
+            "password": "scrypt:32768:8:1$Uzj3quSO4BXk5hHN$0f2c5b3b6597c56e84f3aabd17537ea9ed205dd9f29980d0ebb18a4087d56e7b4fe4c71f37c9e1fba9675129f4b50a35a9cc0cd7de873bb03af998cb0169961a",
+            "role": "faculty",
+            "fac_id": "FAC0087"
+        },
+        {
+            "email": "fac88@example.com",
+            "password": "scrypt:32768:8:1$PJMGhPygpA6Xm6rs$b2b750b6f3f934b95cf008fa70410a715693988864e64dca4b7cd881d228d1c23b7283d9b025cded715fc4b4bea2f28fb0f1303cb9c204c5e7bc762a54d9e748",
+            "role": "faculty",
+            "fac_id": "FAC0088"
+        },
+        {
+            "email": " fac89@example.com",
+            "password": "scrypt:32768:8:1$mI7jrt9zlKU0ZHfO$e724862173a3ea5d7207ac510bff55f90895b5b406103e9a82ce5b56b1208d4224505c56bf39052e9fa743289771a09aaf8d97d3f913a707c1410cc9060e5fa0",
+            "role": "faculty",
+            "fac_id": "FAC0089"
+        },
+        {
+            "email": "fac90@example.com",
+            "password": "scrypt:32768:8:1$NtUbcMmqykF8SA4P$7cce247021be5fa966b28842642b345bed88bc5644a027c5a08d6ab9ece821aff711edc8dd484aba814b42f8ec17d073c3df240695bf81626afcace36063cae7",
+            "role": "faculty",
+            "fac_id": "FAC0090"
+        },
+        {
+            "email": "fac91@example.com",
+            "password": "scrypt:32768:8:1$Di7ZowYxpo38QfIP$787fbd301ef6581d8568a00be7b0595d42bee1f3353132a54b66cfad762110810edc2adb6181af695bf721f0394bc732da12eb2dd9b1a2aa71a1bee5988922b7",
+            "role": "faculty",
+            "fac_id": "FAC0091"
+        },
+        {
+            "email": "fac92@example.com",
+            "password": "scrypt:32768:8:1$McOmn6Pqd3G853vy$7de6bea9962ed79ba62befac4d77b0900585abbf746c1579a5de0d072344b655dff616603c7ac736325041158a5d1b98e4d36cd9bc82d91ebfec4819cf0402a9",
+            "role": "faculty",
+            "fac_id": "FAC0092"
+        },
+        {
+            "email": "fac93@example.com",
+            "password": "scrypt:32768:8:1$nvAF1mI5AAyF4qiY$e1cdb3825b701834024e224353ab3e57fc3d5d5fe42ef1d0a3f79371fc68f297e7316eb3ad6a7551b5926a409ec99c22d8fe9a2ce0de186ef80e901113f47ed3",
+            "role": "faculty",
+            "fac_id": "FAC0093"
+        },
+        {
+            "email": "fac94@example.com",
+            "password": "scrypt:32768:8:1$eLX38E3Usoy7THC7$da044cea4200590f87fa22a1ec94b8d6026444d9aeab6ad29bb562589fce48697320ee02e0fd79185b38940e0ba0459c1dbecdd4b592fb9e500ad8159d9009e4",
+            "role": "faculty",
+            "fac_id": "FAC0094"
+        },
+        {
+            "email": "fac95@example.com",
+            "password": "scrypt:32768:8:1$Nv517heGxRiqMG4D$c95ec9f7242fde86606d07a8c57e836360fa94592f3bce018bc316cf0f5411f0082dd7e032b12bb7c7d81992debd43a1968bf7c11d5db8fcbc8d18bfeed0c6fb",
+            "role": "faculty",
+            "fac_id": "FAC0095"
+        },
+        {
+            "email": "fac96@example.com",
+            "password": "scrypt:32768:8:1$wfVfC9LwrJ6B1Iln$09ca104bcdfeb0d26285fffea020e8632bccf3f03cc621160a70b7d9949f9c723475b1710b4577461e3ee70cdf0f452fab2bac251714d168d2ca1143116b717b",
+            "role": "faculty",
+            "fac_id": "FAC0096"
+        },
+        {
+            "email": "fac97@example.com",
+            "password": "scrypt:32768:8:1$QrpTIA049C5LWJ61$3db53abfc941e93e92f55176fba378c80e5961bf0c8663dc3539130e7ced0f409ba86f2f728c9b7410f995333b7418f7c09a7b5b4140522ec2e17dbb3e27e158",
+            "role": "faculty",
+            "fac_id": "FAC0097"
+        },
+        {
+            "email": "fac98@example.com",
+            "password": "scrypt:32768:8:1$E9yPITqIlTVAHVZc$229194300a0313d0a4254b419731b6af71006337a311384f6ae89f69fb009ffe1c7f4ff04e33b07ea7c0e63691e0163d38eb676b9b1bf07d8cee5069e8131dc1",
+            "role": "faculty",
+            "fac_id": "FAC0098"
+        },
+        {
+            "email": "fac99@example.com",
+            "password": "scrypt:32768:8:1$zr9N6r8zjJFrgCta$f1d78822aae20818327289a3b607205e0ebff71ecd067eff516cc03c788715776bc1226f0e76e33bdf6cee2aeb9ce2c94f53ce41b634c666bc1d6d2abafcb5cc",
+            "role": "faculty",
+            "fac_id": "FAC0099"
+        },
+        {
+            "email": "fac100@example.com",
+            "password": "scrypt:32768:8:1$RUfUTyX8ktQmYQYk$02c12fbc27572afcf32772afb06b91d16c991c1592c418285920af78bf7d95acc11722026e73d98aeddd3eb9a54a4ec6d98db03bedd2bbac369a3523d89c3f73",
+            "role": "faculty",
+            "fac_id": "FAC00100"
+        },
+        {
+            "email": "fac101@example.com",
+            "password": "scrypt:32768:8:1$cX4Tm59xBWE1LA2I$bb0cefe35007d9989b1953327049de20fdc9f7aea27ca20b0a5b2e8dd6f9e454bbd9ba7abae60cced03f4eabd8d94e0f51a5bd60792d086ab15646cce6706608",
+            "role": "faculty",
+            "fac_id": "FAC00101"
+        },
+        {
+            "email": "fac102@example.com",
+            "password": "scrypt:32768:8:1$hxrFKJai2PLtBjZS$ddda0c3f6c4be0c7c554dbe4a522a131071ee3d456ccf90f0e268180001df1383b4036132c0c2ae25d75d6a3e52f5850a83d7abe7225812ab41b17a8d89c820f",
+            "role": "faculty",
+            "fac_id": "FAC00102"
+        },
+        {
+            "email": "fac103@example.com",
+            "password": "scrypt:32768:8:1$bfWg7UoNoCcRozE1$54b87ab9bf436fec1e89ea22683472e191a3b4cd7194bf7fd814ee58f017693781b2bc680cc885def2a48c99f12f3638c0852f44cf89125cb421ffc6b27bf01b",
+            "role": "faculty",
+            "fac_id": "FAC00103"
+        },
+        {
+            "email": "fac104@example.com",
+            "password": "scrypt:32768:8:1$Kyvu8ycTtky8iYtz$c1091f41ad1c40e671de0cc05be2945dccf284253cf35c977f5165f9fb3dea2a91040a1a30d0d95c99f7101c312234298acdb6d1590f2e06f1b4685e91f60f04",
+            "role": "faculty",
+            "fac_id": "FAC00104"
+        },
+        {
+            "email": "fac105@example.com",
+            "password": "scrypt:32768:8:1$TIHRaYTbiiIupH4g$ab6cbad68ffd86eb51551ac37f5e11bcbff201525b2f4a0087565865c54c305f3e577feb659a852583383141ce616d61663e7a0b19f8bfd34f010151094c9cdb",
+            "role": "faculty",
+            "fac_id": "FAC00105"
+        },
+        {
+            "email": "fac106@example.com",
+            "password": "scrypt:32768:8:1$KbljD1KC3oimIRJZ$a2a86e310c7540f863c286d385c6a4a93b6cbd99ec0f73dc003ea1f02fb0fb9cf363d4b04758a80f5f68fc5d36675b8daac039d74b0e86b59ddf942fbd6c1199",
+            "role": "faculty",
+            "fac_id": "FAC00106"
+        },
+        {
+            "email": "fac107@example.com",
+            "password": "scrypt:32768:8:1$OSMiJQ5bG79E5RxY$299978d8165bb953c0d191279f9e5fc5ff1bfcf0e3a7ae750acd5144091deee25cf1e0bd053adcf71c7e914528cddb8e10348b6d94544f094429005fb1eaa872",
+            "role": "faculty",
+            "fac_id": "FAC00107"
+        },
+        {
+            "email": "fac108@example.com",
+            "password": "scrypt:32768:8:1$1s0AV03MmyK028xY$e4eaf6d8150d2aa2bf51c523245024b659df22df44df9b0647d1205756005f4cfd92117f207e5ff7a14c26b0b85f95e51e488d3a1b5360a89159702ba8807d2b",
+            "role": "faculty",
+            "fac_id": "FAC00108"
+        },
+        {
+            "email": "fac109@example.com",
+            "password": "scrypt:32768:8:1$mAhKbLuqygOJFmAc$a66bf50615d8d34e08c0a6be2a59cf1533931a37c642da136e8327a9c6f79c7b62f57e06de6241812ec8a8e3d81ed5a299094ea833760fdf4520f238a47fd380",
+            "role": "faculty",
+            "fac_id": "FAC00109"
+        },
+        {
+            "email": "fac110@example.com",
+            "password": "scrypt:32768:8:1$H3Bw54xZaXidyRFC$992b906691712dcf1126180c5a675a326b53b7f447f437881265c6e198a483975a5af1f0a8b7eee8dd9a30e578a8edd0cf0016199559c72acc1ec8960bee4399",
+            "role": "faculty",
+            "fac_id": "FAC00110"
+        },
+        {
+            "email": "fac111@example.com",
+            "password": "scrypt:32768:8:1$JIJVY4591jkCt6rc$af6c55ccce4700c4c52f910361ef736df94fc5cdad25e4c035407dffbdff893c0ccaedc6d6f0524b861b407a94bdf3ffcdfeb1e4cc31f04eaef463c02506bd56",
+            "role": "faculty",
+            "fac_id": "FAC00111"
+        },
+        {
+            "email": "fac112@example.com",
+            "password": "scrypt:32768:8:1$gdKSu9wuDPKnJ0SC$2092b2dd13e0e381f777d48759f1670422cd8ead4486a8520a8f698cb050fd20c696bf2e517fab0b8fec587ec1b0bc4696d9266a048987d60abf8110eb58b726",
+            "role": "faculty",
+            "fac_id": "FAC00112"
+        },
+        {
+            "email": "fac113@example.com",
+            "password": "scrypt:32768:8:1$abPSp9bsLt91SuEM$fe01d5a81e5a8391943c610e70aed9524e962a5c71e726662f033403896cb89217c6c8c25d8b37f3b2057d14f1a2ccb07ebcb926e2b83cd630702822e38a02c0",
+            "role": "faculty",
+            "fac_id": "FAC00113"
+        },
+        {
+            "email": "fac114@example.com",
+            "password": "scrypt:32768:8:1$PMh56L7rMkcFoRzn$90798f1c30656ee73db7734a9720d12862968dc61462a6eed90a541164c6161c13cd67d3fe0e44cf308c25fc97cfd9e3e15e61c2134051a06c433cc1193286f6",
+            "role": "faculty",
+            "fac_id": "FAC00114"
+        },
+        {
+            "email": "fac115@example.com",
+            "password": "scrypt:32768:8:1$KqPlq2meCuNCX2Js$0f0bc64e747baa0b3cc244030bc52036edd57ac05aaaef33ffdadd82a19900844962995c987a5823a300ddfc4d9aed4f6d3615c25c6079273638b1a486026841",
+            "role": "faculty",
+            "fac_id": "FAC00115"
+        },
+        {
+            "email": "fac116@example.com",
+            "password": "scrypt:32768:8:1$znsZTV9Nm5MSJF8A$b00d00ef83d23e3ee1144ccce2ea317d5f2a47ac169c5f00ddf49d49a0090ed30d2b1e55ce186db70fb141d156ae5bbd27815e33184a47de84428a1ade38a54b",
+            "role": "faculty",
+            "fac_id": "FAC00116"
+        },
+        {
+            "email": "fac117@example.com",
+            "password": "scrypt:32768:8:1$csG9yG6bGETc3Jhi$a105f4631802a66db39709c4bf971359b8db8c355f0d40623a47c313e1600eaaa2debea9f88cbcf4784da9a2603cc0d80992226ef37bb4ed17603b9f25c9a806",
+            "role": "faculty",
+            "fac_id": "FAC00117"
+        },
+        {
+            "email": "fac118@example.com",
+            "password": "scrypt:32768:8:1$b0rELKAhnOFaPNC2$bcc39b9276c361d1d3005bd731617b9281b4dda7065b184fd7ca0ade8e6517187c1b1129a1a9b4c07983c66fcd6e46f6af8e038d450b83672d3d3e8e9eaf415f",
+            "role": "faculty",
+            "fac_id": "FAC00118"
+        },
+        {
+            "email": "fac119@example.com",
+            "password": "scrypt:32768:8:1$Yks9hpH3Tq6LTTIR$bdf0c0bf623c93799d7341f63ac8a62c41dfd3246abe00c7eaeedb656aa553a7992cc324f4c798338d6c1fed0f681f6b131c94540fc37eb4fd89940aa686dec9",
+            "role": "faculty",
+            "fac_id": "FAC00119"
+        },
+        {
+            "email": "fac120@example.com",
+            "password": "scrypt:32768:8:1$luQLq9AwZ6gfSRkI$d08b6d641e026383efb3bc74889334a5e2c7fc5aa83954dee613e1ac124f23914eba73c78b7b4c027601b967e571a1d8ffd542d83d32853e980f94c525fec2ab",
+            "role": "faculty",
+            "fac_id": "FAC00120"
+        },
+        {
+            "email": "fac121@example.com",
+            "password": "scrypt:32768:8:1$zu5WrFUPmrsAJHp1$920e2481eef8caa390ee89e6f3dee281e01acca546666912bb369dbdde627dd9ffc780136921ab33d4956b77e3bfbfc58933fe331c0bbcb4d83e5a86354ff791",
+            "role": "faculty",
+            "fac_id": "FAC00121"
+        },
+        {
+            "email": "fac122@example.com",
+            "password": "scrypt:32768:8:1$uWScZs9bzBjvE0gQ$8c8561301ff82a3dfd84ae637d03003cf602a121d2f815be3fd070dfcee2d577d4665e9dcf945ae39e0fc7f518d4b7cf9405a54c7bffba8607fe9773efed950f",
+            "role": "faculty",
+            "fac_id": "FAC00122"
+        },
+        {
+            "email": "fac123@example.com",
+            "password": "scrypt:32768:8:1$OH2Q3oOuuW1fYCUd$6acfe7914bb1f5d3ce695867750dfecc5dbff0c78181834e785bf275b7486b031df7d5b4491dcc0f070e153d946c4408370d09b6720ca8d0405ec4c37c35a664",
+            "role": "faculty",
+            "fac_id": "FAC00123"
+        },
+        {
+            "email": "fac124@example.com",
+            "password": "scrypt:32768:8:1$6zYkhcB2TcESB3Nf$b636580e7fff000b25dd906a96a8e68fc6fd2d372286fbdde96d02eda7b4eae67430d9783ad7b80796093803b2729118443bb69b9611f82205fc48682dda27fb",
+            "role": "faculty",
+            "fac_id": "FAC00124"
+        },
+        {
+            "email": "fac125@example.com",
+            "password": "scrypt:32768:8:1$GzXhOaYfbWwf4n4Y$e8638112cdddcf0ee69af3b4ee08263d9627f1b4c08c6305dcf7b0eb8abcf695800208e2f23d21a6214e156aa1fcc81b5b91684b9b8c5f72f51b38253fb85d73",
+            "role": "faculty",
+            "fac_id": "FAC00125"
+        },
+        {
+            "email": "fac126@example.com",
+            "password": "scrypt:32768:8:1$03pVAVi2EYz5TKEx$97d3645618dc27b96a48c98c2c3b4e54c41d1a42f874926066184f00730eec3ebde51f10e0deefc4d6d244e24605ae41eecb6a4cd902c3f4d013b8f3199351df",
+            "role": "faculty",
+            "fac_id": "FAC00126"
+        },
+        {
+            "email": "fac127@example.com",
+            "password": "scrypt:32768:8:1$W68HvpguJGatAnnb$c776e39ea21be115057bf069126393ddbbe215abc43c696085c87bea495047786c7993d3b062ea451f44e44d55d16dc60ee0169c2f663be7498c0b8314a736d9",
+            "role": "faculty",
+            "fac_id": "FAC00127"
+        },
+        {
+            "email": "fac128@example.com",
+            "password": "scrypt:32768:8:1$vseSVbQn2iLbQRIm$6238b1ebe54ebaa730800a338101bcf4dbf6478c841842d266d840eee1f5ace833799f6d3fc3de8f53bc12c24191960cd59c75a10c265036fda48c4085d22a7e",
+            "role": "faculty",
+            "fac_id": "FAC00128"
+        },
+        {
+            "email": "fac129@example.com",
+            "password": "scrypt:32768:8:1$EtD5Npey5nmKjfHu$38412e61196dda218e10c690c73243969e9ce08044433ffe2a2b36d2fcc9ebbd8f66d0b69f2a53137be3da9827ecd4739684aaa32f5c46a8e80e5ca5dcaa5aec",
+            "role": "faculty",
+            "fac_id": "FAC00129"
+        },
+        {
+            "email": "fac130@example.com",
+            "password": "scrypt:32768:8:1$7CxwNWnsTnmpAX5u$b6ff134cf530a7b096fb016b8c217a6284d34a39ad98932d91b27b061abb89a2aa673bd5b1d6a09476ea4fe151a0077da9cc6acd86ea4de671ac331211a211a4",
+            "role": "faculty",
+            "fac_id": "FAC00130"
+        },
+        {
+            "email": "fac131@example.com",
+            "password": "scrypt:32768:8:1$QdujCKQ45NeRPu2W$9b2e49ac6ca24e24e37922a64472159737b82809fb4fe31fdfe5bde300961184cb3c65c44c80d00145745a3cde39ebeb13c0dc146aaab6422f37d2552b7ebf00",
+            "role": "faculty",
+            "fac_id": "FAC00131"
+        },
+        {
+            "email": "fac132@example.com",
+            "password": "scrypt:32768:8:1$xEelk6vKzUkmRuhH$87653d01c4432b50865a35668931a839ea1623d19e35e8904f967b5fa1ed2374e33f505f483005c2c63ba2bfa4420cb2e4fd916c33b1cf498ddc38e1eb1f3086",
+            "role": "faculty",
+            "fac_id": "FAC00132"
+        },
+        {
+            "email": "fac133@example.com",
+            "password": "scrypt:32768:8:1$2UV1ZvSIm7uz9JBP$cbf5f7fec81632c7fc20a413cfdadd23c2216621944f96cb466afcaea432e9e11e49a9e02df1a69483b0b9c0858868d2f07d3bfaf05e5c98e9d8d5bfc0771f08",
+            "role": "faculty",
+            "fac_id": "FAC00133"
+        },
+        {
+            "email": "fac134@example.com",
+            "password": "scrypt:32768:8:1$PpW7JJpo0kOOeDjd$55e8ab347ac146a24b923181f13c70b9948fc2d697d363d8ee2e7b95afa41a73e94779e5a192d3793bc2a1bc321e5aa29c8d655c24cd212147fbfba519446cc5",
+            "role": "faculty",
+            "fac_id": "FAC00134"
+        },
+        {
+            "email": "fac135@example.com",
+            "password": "scrypt:32768:8:1$6VtxPVD1dFq3lKNh$9ba591bd8af3ba96031ba46c72c11e0d55905711aafc94ed8a90e4a3bc001a1d4bd3b30f7b2760a61f6e4f62e191207851d446cbd4094eda099e76be7e3c45dd",
+            "role": "faculty",
+            "fac_id": "FAC00135"
+        },
+        {
+            "email": "fac136@example.com",
+            "password": "scrypt:32768:8:1$kChSbV9doHcseH7P$07becf8ef16e57e81f92746ccde8e6077236dc27e0d9866ce6e533edd9e06aa500e7ca52b458303af6b0b05ada9410d66daa2bb45aff029b5c0a42e2b2f89aef",
+            "role": "faculty",
+            "fac_id": "FAC00136"
+        },
+        {
+            "email": "fac137@example.com",
+            "password": "scrypt:32768:8:1$bf4tte7WWa1F87ub$3c39ffd44e0c4e9e19653c46633a7639269b1245ac0a3f10737b449ef58d418b7a7b69b5c3b00e9147bf1d6bb420df3c982dbcb7ecb810dc680eff6c16374fa9",
+            "role": "faculty",
+            "fac_id": "FAC00137"
+        },
+        {
+            "email": "fac138@example.com",
+            "password": "scrypt:32768:8:1$xw4hITqJFnvetZUL$5fc62e17d97c1af21dc6fe7ff22a2953a2f611723963f48a67551f87c878c450468b0c2b88596fe681258a396e588ed83f2dc090f91e7c5b8e8dd0a2c28a1986",
+            "role": "faculty",
+            "fac_id": "FAC00138"
+        },
+        {
+            "email": "fac139@example.com",
+            "password": "scrypt:32768:8:1$91tbbt98uaGvA2l9$7cfb68b767fb7cccd6b828b7e009fa8963faa6164f9508de3185abf103fdb0ae3561f51405acf020dee0169bf0e9fddb5c68b92b8c52efaeee3b8f6b650b4d7d",
+            "role": "faculty",
+            "fac_id": "FAC00139"
+        },
+        {
+            "email": "fac140@example.com",
+            "password": "scrypt:32768:8:1$pveUhGxdHA3pKP0e$c87c49efa3604b4169aca234401c152622405c651e1d805a4ef4ad979378cba3470b155faef6ccddbdf87ed0c7d3353f31283fdd87f3f92e1c4e208e4136667b",
+            "role": "faculty",
+            "fac_id": "FAC00140"
+        },
+        {
+            "email": "fac141@example.com",
+            "password": "scrypt:32768:8:1$8FUx7fVXasIdibyY$cf8e100f0f1c999f16eb5dd810a1a475a2f4a026891c5bfca4326dee6845d62fa0e37252e4b1d6708c44cbd8bd12b00ccedd9a0a27cad37f9b62307eeaadf7d7",
+            "role": "faculty",
+            "fac_id": "FAC00141"
+        },
+        {
+            "email": "fac142@example.com",
+            "password": "scrypt:32768:8:1$Flh3Tz2tuRmF6JRK$d11adcaae2d934bc3cf8467cffe3157b57c293837222051b73c55156ecf6d26932d1208912a7dd4412635b28a4396512a5b56a24bbd0a1872ae79fe3263de39d",
+            "role": "faculty",
+            "fac_id": "FAC00142"
+        },
+        {
+            "email": "fac143@example.com",
+            "password": "scrypt:32768:8:1$SoXSjSz4BnQly5FH$23b56e18aa10ee3846d64773b986e099e0674e558cc98d01b39c734c46acfe7e1e6e88a7fbd628c6fcd8c226f07290cf1ea8885cce0ae3edc14b98c16e417017",
+            "role": "faculty",
+            "fac_id": "FAC00143"
+        },
+        {
+            "email": "fac144@example.com",
+            "password": "scrypt:32768:8:1$tZFDsWfPccvY4mjJ$e6ea2bc9aa8227eaeb3ca02cb3ece3179cbf46e2eee8942ab1eecd724f1fbb9913888304d0ba502603630624c41ded4e362234ab78a6212e20c007625a9fe96e",
+            "role": "admin",
+            "fac_id": "FAC00144"
+        },
+        {
+            "email": "fac145@example.com",
+            "password": "scrypt:32768:8:1$ZfU1mFs3tALBMKEe$f9b854d161970a46b334ee9b2a5515a5664e48bc8510c4f39dd5ee9e1ed1993c70a1a9dfed814e050be54ee7f24bb269ebb617b0444eb2dbe8b5a55d0384d062",
+            "role": "faculty",
+            "fac_id": "FAC00145"
+        },
+        {
+            "email": "fac146@example.com",
+            "password": "scrypt:32768:8:1$0sfvc7FHQWChAsz0$13639e7b96361a81042caa337ee2bee4913baf92a410f65fcb209ecb9c620134f73dcba808d3c4cf7a9a885f533b99e8fcbeadd417077abb797d20e72f472239",
+            "role": "faculty",
+            "fac_id": "FAC00146"
+        },
+        {
+            "email": "fac147@example.com",
+            "password": "scrypt:32768:8:1$T51V4XoT1YHxtCYY$b87840dbe6a7b5d30a4a796bb76a2ad6cd9677206830dee84ee6c2db47f29b7f45789cabec9516fff79be457af6fbe3f0ae42dcc6717fece122ae920bf8b5410",
+            "role": "faculty",
+            "fac_id": "FAC00147"
+        },
+        {
+            "email": "fac148@example.com",
+            "password": "scrypt:32768:8:1$eJaYB4SHQi9oSBGW$761def9a6430487b09a71e5ff986fe62e6e4a316d24c6516466920fab42e656379a99127ee0743fe8a33eb9cd95e587a7826dc74f9cf0122e5d84cad7d8d5653",
+            "role": "faculty",
+            "fac_id": "FAC00148"
+        },
+        {
+            "email": "fac149@example.com",
+            "password": "scrypt:32768:8:1$TYvSvkXr11ghy20i$9bc2afd68d90c2e4f61d092ab01a816e7a53e5a382a2be3904e2c6c831a7dfcc74b315067b71bcd37b5c7addaa3a8c73eee1da6d8b305947de0a3bc0e0f3efd1",
+            "role": "faculty",
+            "fac_id": "FAC00149"
+        },
+        {
+            "email": "fac150@example.com",
+            "password": "scrypt:32768:8:1$F9iwQDXc7pYXWmJP$22656270899aa7f3318fc80ae3c493d07003bebce1540f5a0ed5096518c0df6a1d2ce75a10474d73c362c6ca1629b87d29588b13649be6f78f5fbac3cfd7614b",
+            "role": "faculty",
+            "fac_id": "FAC00150"
+>>>>>>> Stashed changes
         }
     ]
 }

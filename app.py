@@ -4,8 +4,12 @@ import os
 import json
 from functools import wraps
 
+<<<<<<< Updated upstream
 #pass = hello1
 #id = FAC00
+=======
+#pass = hello11
+>>>>>>> Stashed changes
 
 app = Flask(__name__)
 
