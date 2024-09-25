@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Dropdown Menu</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <style>
@@ -101,22 +101,22 @@
     <header>
         <ul class="nav-links">
             <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1726272000&semt=ais_hybrid" alt="" class="logo" id="logo">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Milestone.html">Milestone</a></li>
-            <li><a href="Lectures.html">Lectures</a></li>
-            <li><a href="Research.html">Research</a></li>
-            <li><a href="Assignment.html">Assignments</a></li>
-            <li><a href="Announcement.html">Announcements</a></li>
-            <li><a href="registraion.html" class="active">Registration</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
+            <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+            <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
+            <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
+            <li><a href="{{ url_for('registration') }}"class="active">Registration</a></li>
         </ul>
 
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
             <div class="dropdown-menu" id="dropdown-menu">
-                <a href="profile.html">Profile</a>
-                <a href="setting.html">Settings</a>
-                <a href="Contactadmin.html">Contact Admin</a>
-                <a href="login.html">Logout</a>
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('contactadmin') }}">Contact Admin</a>
+                <a href="{{ url_for('login') }}">Logout</a>
             </div>
         </div>
         

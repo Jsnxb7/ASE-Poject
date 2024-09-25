@@ -10,13 +10,15 @@
 <body>
     <header>
         <ul class="nav-links">
-            <li><a href="{{ url_for('index') }}">Logo</a></li>
+            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1726272000&semt=ais_hybrid" alt="" class="logo" id="logo">
             <li><a href="{{ url_for('index') }}"class="active">Home</a></li>
             <li><a href="{{ url_for('milestones') }}">Milestone</a></li>
             <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
             <li><a href="{{ url_for('research') }}">Research</a></li>
             <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
             <li><a href="{{ url_for('announcement') }}">Announcements</a></li>
+            <li><a href="{{ url_for('registration') }}">Registration</a></li>
+     
         </ul>
 
         <div class="profile">
@@ -71,22 +73,31 @@
         <div id="popup" class="popup">
             <div class="popup-content">
                 <span id="close-popup" class="close">&times;</span>
-                <h2>Details for <span id="selected-day"></span></h2>
-                <p>Here you can display more information for the selected day.</p>
             </div>
         </div>
 
         <section class="hero-section">
             <div class="right-boxes">
                 <div class="info-box">
-                    <h2>Punch-In Time</h2>
-                    <h2>Holidays Taken</h2>
-                    <h2>Attendance</h2>
-                    <h2>Holidays Left</h2>
+                    <div class="progress-container">
+                        <h1>Progress Bar</h1>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress" style="width: 75%;">75% Complete</div>
+                        </div>
+                        <div class="module-circles">
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                        </div>
+                    </div>
                 </div>
                 <!-- Add more info-boxes if needed -->
             </div>
         </section>
+
         
         
         <div class="nav-bot">
