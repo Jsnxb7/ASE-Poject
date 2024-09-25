@@ -4,7 +4,8 @@ import os
 import json
 from functools import wraps
 
-#pass = hello16
+#pass = hello1
+#id = FAC00
 
 app = Flask(__name__)
 
