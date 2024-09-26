@@ -146,5 +146,63 @@ def settings():
 def registration():
     return render_template("registration.html")
 
+
+
+@app.route('/register', methods=['POST'])
+def register():
+    data = request.get_json()
+
+    name = data.get('name')
+    fac_id = data.get('facultyId')
+    email = data.get('email')
+    phone = data.get('phone')
+    address = data.get('address')
+    landmark = data.get('landmark')
+    state = data.get('state')
+    city = data.get('city')
+    zip_code = data.get('zip')
+
+    # Prepare the user data as a dictionary
+    user_data = {
+        "name": name,
+        "facultyId": fac_id,
+        "email": email,
+        "phone": phone,
+        "address": address,
+        "landmark": landmark,
+        "state": state,
+        "city": city,
+        "zip": zip_code
+    }
+
+    # Define the file path
+    user_data_filename = f"{fac_id}_user_data.json"
+    user_data_filepath = os.path.join(user_data_filename)
+
+    try:
+        # Read existing data
+        if os.path.exists(user_data_filepath):
+            with open(user_data_filepath, 'r') as json_file:
+                # Load existing data
+                existing_data = json.load(json_file)
+
+                # Check if the existing data is a list
+                if not isinstance(existing_data, list):
+                    # If it's not a list, wrap it in a list
+                    existing_data = [existing_data]
+        else:
+            existing_data = []  # If file does not exist, start with an empty list
+
+        # Append new user data
+        existing_data.append(user_data)
+
+        # Write back to the same file
+        with open(user_data_filepath, 'w') as json_file:
+            json.dump(existing_data, json_file, indent=4)
+
+        return jsonify({"message": "Registration successful"}), 201
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == '__main__':
     app.run(debug=True)

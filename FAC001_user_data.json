@@ -1,10 +1,23 @@
-{
-    "users": [
-        {
-            "email": "fac1@example.com",
-            "password": "scrypt:32768:8:1$VQU2XZJQXkFBNa7I$df8e1b79cac6b906fc9a1d84d262a8e5bb0edabe9a432553d96143c04621d2cf41e1683b60738a33faa70b37c45a3742264abc987e2a2f4dc227a03ab24aa48b",
-            "role": "faculty",
-            "fac_id": "FAC001"
-        }
-    ]
-}
+[
+    {
+        "users": [
+            {
+                "email": "fac1@example.com",
+                "password": "scrypt:32768:8:1$VQU2XZJQXkFBNa7I$df8e1b79cac6b906fc9a1d84d262a8e5bb0edabe9a432553d96143c04621d2cf41e1683b60738a33faa70b37c45a3742264abc987e2a2f4dc227a03ab24aa48b",
+                "role": "faculty",
+                "fac_id": "FAC001"
+            }
+        ]
+    },
+    {
+        "name": "shourya",
+        "facultyId": "FAC001",
+        "email": "radz@gmsil.csm",
+        "phone": "8742980205",
+        "address": "mneaijfi",
+        "landmark": "miofsioenioen",
+        "state": "delhi",
+        "city": "delhi",
+        "zip": "110045"
+    }
+]
