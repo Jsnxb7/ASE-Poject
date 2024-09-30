@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "email": "fac979@example.com",
+            "password": "scrypt:32768:8:1$05mbKgt4AM1I7oDT$c6ba3eee0ed206f6873b05a5c988558b14653d45ebb5193ee5305a52b8d3510e23e5a6f0b902f3c19671679c6921934c96a747ecd0b68da25ad9c71e6a757023",
+            "role": "faculty",
+            "fac_id": "FAC00979"
+        }
+    ],
+    "announcements": [
+        {
+            "title": "donnas",
+            "description": "noifbiyeb",
+            "date": "2024-10-04",
+            "type": "event",
+            "priority": "high"
+        }
+    ]
+}

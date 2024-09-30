@@ -7,6 +7,10 @@ from functools import wraps
 
 app = Flask(__name__)
 
+
+current_dir = os.getcwd()
+
+
 @app.route('/')
 def login():
     return render_template('login.html')
@@ -61,7 +65,7 @@ def create_user():
     save_users(users)
 
     # Create a new JSON file for the user based on fac_id
-    user_data_filename = f"{fac_id}_user_data.json"
+    user_data_filename = f"static/user/{fac_id}_user_data.json"
     
     # Create or reference the user data JSON file
     if not os.path.exists(user_data_filename):
@@ -146,8 +150,6 @@ def settings():
 def registration():
     return render_template("registration.html")
 
-
-
 @app.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
@@ -203,6 +205,98 @@ def register():
         return jsonify({"message": "Registration successful"}), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route('/admin_announcement')
+def admin_announcement():
+    return render_template("admin_announcement.html")
+
+@app.route('/admin_assignment')
+def admin_assignment():
+    return render_template("admin_assignment.html")
+
+# Function to load announcements for a faculty
+def load_announcements(faculty_id):
+    file_path = os.path.join(f'static/user/{faculty_id}_user_data.json')  # Use a more general file name
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            # Ensure we return a list of announcements
+            if "announcements" in data:
+                return data["announcements"]
+            else:
+                return []
+    return []
+
+# Function to save an announcement for a faculty
+def save_announcement(faculty_id, announcement):
+    file_path = os.path.join(current_dir, f'static/user/{faculty_id}_user_data.json')  # Use a more general file name
+    
+    # Load existing data
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+    else:
+        # Initialize the structure if the file does not exist
+        data = {
+            "users": [],
+            "announcements": []  # Ensure announcements is initialized
+        }
+
+    # Check if the "announcements" key exists, initialize if not
+    if "announcements" not in data:
+        data["announcements"] = []
+
+    # Append the new announcement
+    data["announcements"].append(announcement)
+    
+    # Save back to the JSON file with the correct structure
+    with open(file_path, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def get_all_faculty_ids():
+    faculty_files = [f.split('_')[0] for f in os.listdir('static/user')]
+    return faculty_files
+
+@app.route('/admin_announcement/make_announcement', methods=['GET', 'POST'])
+def admin_announcement_make_announcement():
+    if request.method == 'POST':
+        announcement_title = request.form['announcement-title']
+        description = request.form['description']
+        date = request.form['date']
+        announcement_type = request.form['announcement-type']
+        priority = request.form['priority']
+
+        # Create an announcement object
+        announcement = {
+            'title': announcement_title,
+            'description': description,
+            'date': date,
+            'type': announcement_type,
+            'priority': priority
+        }
+
+        # Save the announcement to all faculty JSON files
+        faculty_ids = get_all_faculty_ids()
+        for faculty_id in faculty_ids:
+            save_announcement(faculty_id, announcement)
+
+        return redirect(url_for('admin_announcement'))
+
+@app.route('/admin_lecture')
+def admin_lecture():
+    return render_template("admin_lecture.html")
+
+@app.route('/admin_milestone')
+def admin_milestone():
+    return render_template("admin_milestone.html")
+
+@app.route('/admin_notification')
+def admin_notification():
+    return render_template("admin_notification.html")
+
+@app.route('/admin_registration')
+def admin_registration():
+    return render_template("admin_registration.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

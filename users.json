@@ -455,8 +455,6 @@
             "password": "scrypt:32768:8:1$oVE6UATZ2kUaBAsk$63fa0a449215c06215907b4c019f354a62bceb8dcdea5dbb446ace2e0459637853a4b3ca6013e3220617f787239dd64877f5ada72e01b9ab8f8a08e0b16da702",
             "role": "faculty",
             "fac_id": "FAC0075"
-
-        
         },
         {
             "email": "fac76@example.com",
@@ -907,6 +905,24 @@
             "password": "scrypt:32768:8:1$F9iwQDXc7pYXWmJP$22656270899aa7f3318fc80ae3c493d07003bebce1540f5a0ed5096518c0df6a1d2ce75a10474d73c362c6ca1629b87d29588b13649be6f78f5fbac3cfd7614b",
             "role": "faculty",
             "fac_id": "FAC00150"
+        },
+        {
+            "email": "fac999@example.com",
+            "password": "scrypt:32768:8:1$IT9XVU79jJB5uxQs$5601af8db665a78f34e4d352c103d8c1ca02ead30783cbaefc8f20748aac05cdf359fa51e140d6919df6018a3db7bcb0bf26562911f9414ead7e5bde73ddad87",
+            "role": "faculty",
+            "fac_id": "FAC00999"
+        },
+        {
+            "email": "fac997@example.com",
+            "password": "scrypt:32768:8:1$JEPEbCC4uYeuwzvc$855d01abc37bb4df639f962629d5bbbd2d95b99ab2562eec728fdb2868933e0835db34d1ecd4525351b7c217598c69459af41796e46808ebb7878e3929b80889",
+            "role": "faculty",
+            "fac_id": "FAC00997"
+        },
+        {
+            "email": "fac979@example.com",
+            "password": "scrypt:32768:8:1$05mbKgt4AM1I7oDT$c6ba3eee0ed206f6873b05a5c988558b14653d45ebb5193ee5305a52b8d3510e23e5a6f0b902f3c19671679c6921934c96a747ecd0b68da25ad9c71e6a757023",
+            "role": "faculty",
+            "fac_id": "FAC00979"
         }
     ]
 }

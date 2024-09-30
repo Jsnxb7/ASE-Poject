@@ -1,0 +1,26 @@
+{
+    "users": [
+        {
+            "email": "fac997@example.com",
+            "password": "scrypt:32768:8:1$JEPEbCC4uYeuwzvc$855d01abc37bb4df639f962629d5bbbd2d95b99ab2562eec728fdb2868933e0835db34d1ecd4525351b7c217598c69459af41796e46808ebb7878e3929b80889",
+            "role": "faculty",
+            "fac_id": "FAC00997"
+        }
+    ],
+    "announcements": [
+        {
+            "title": "kemfsnei",
+            "description": ",cjsenfiunej",
+            "date": "2024-10-12",
+            "type": "event",
+            "priority": "high"
+        },
+        {
+            "title": "donnas",
+            "description": "noifbiyeb",
+            "date": "2024-10-04",
+            "type": "event",
+            "priority": "high"
+        }
+    ]
+}

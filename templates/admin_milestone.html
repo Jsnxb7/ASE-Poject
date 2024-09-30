@@ -11,14 +11,15 @@
     <header>
         <ul class="nav-links">
             <li><a href="{{ url_for('admin_panel') }}">Logo</a></li>
-            <li><a href="{{ url_for('admin_panel') }}"class="active">Create User</a></li>
+            <li><a href="{{ url_for('admin_panel') }}">Create User</a></li>
             <li><a href="{{ url_for('admin_announcement') }}">Announcement</a></li>
-            <li><a href="{{ url_for('admin_milestone') }}">Set Milestone</a></li>
+            <li><a href="{{ url_for('admin_milestone') }}"class="active">Set Milestone</a></li>
             <li><a href="{{ url_for('admin_lecture') }}">Create Lecture</a></li>
             <li><a href="{{ url_for('admin_assignment') }}">Assignment</a></li>
             <li><a href="{{ url_for('admin_registration') }}">Registration</a></li>
             <li><a href="{{ url_for('admin_notification') }}">Notification</a></li>
         </ul>
+
 
         <div class="profile">
             <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
@@ -56,7 +57,7 @@
         <div id="message"></div>
     </section>
 
-    <script type="text/javascript" src="{{ url_for('static', filename='admin.js') }}"></script>
+    <script type="text/javascript" src="admin.js"></script>
 
 </body>
 </html>

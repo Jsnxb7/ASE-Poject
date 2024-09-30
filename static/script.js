@@ -134,7 +134,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const videoElement = document.getElementById('cameraPreview');
 const toggleButton = document.getElementById('toggleCamera');
+const canvas = document.getElementById('capturedImage');
+const context = canvas.getContext('2d');
 let stream = null;
+let cameraState = 'stopped'; // Track camera state
 
 // Function to start the camera
 function startCamera() {
@@ -144,7 +147,8 @@ function startCamera() {
                 stream = mediaStream;
                 videoElement.srcObject = mediaStream;
                 videoElement.style.display = 'block'; // Show the video
-                toggleButton.textContent = 'Stop Camera'; // Change button text
+                toggleButton.textContent = 'Capture Image'; // Change button text
+                cameraState = 'running'; // Update state
             })
             .catch(function(error) {
                 console.error("Error accessing the camera: ", error);
@@ -163,84 +167,38 @@ function stopCamera() {
         videoElement.style.display = 'none'; // Hide the video
         toggleButton.textContent = 'Start Camera'; // Change button text
         stream = null; // Reset the stream
+        cameraState = 'stopped'; // Update state
     }
 }
 
-// Toggle camera on/off
+// Function to capture the image
+function captureImage() {
+    canvas.width = videoElement.videoWidth; // Set canvas width to video width
+    canvas.height = videoElement.videoHeight; // Set canvas height to video height
+    context.drawImage(videoElement, 0, 0); // Draw the video frame to canvas
+
+    // Get the image data URL
+    const imageDataUrl = canvas.toDataURL('image/png');
+
+    // Create a timestamp for the file name
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-'); // Format timestamp
+    const link = document.createElement('a'); // Create a link element
+    link.href = imageDataUrl; // Set the link's href to the image data URL
+    link.download = `captured_image_${timestamp}.png`; // Set the download attribute with a filename
+    link.click(); // Simulate a click on the link to trigger the download
+
+    console.log('Captured Image Data URL:', imageDataUrl); // Log the image data URL
+}
+
+// Toggle camera and capture image
 toggleButton.addEventListener('click', function() {
-    if (stream) {
-        stopCamera(); // If the camera is on, stop it
-    } else {
+    if (cameraState === 'stopped') {
         startCamera(); // If the camera is off, start it
+    } else if (cameraState === 'running') {
+        captureImage(); // If the camera is on, capture the image
+        toggleButton.textContent = 'Stop Camera'; // Change button text to stop
+        cameraState = 'captured'; // Update state
+    } else if (cameraState === 'captured') {
+        stopCamera(); // If an image has been captured, stop the camera
     }
 });
-
-
-
-
-// registration data
-
-
-function submitForm(event) {
-    // Prevent the form from submitting the traditional way
-    event.preventDefault();
-
-    // Retrieve individual form field values
-    const name = document.getElementById('name').value;
-    const facultyId = document.getElementById('faculty-id').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const address = document.getElementById('address').value;
-    const landmark = document.getElementById('landmark').value;
-    const state = document.getElementById('state').value;
-    const city = document.getElementById('city').value;
-    const zip = document.getElementById('zip').value;
-
-    // Log to check if values are being retrieved
-    console.log('Name:', name);
-    console.log('Faculty ID:', facultyId);
-    console.log('Email:', email);
-    console.log('Phone:', phone);
-    console.log('Address:', address);
-    console.log('Landmark:', landmark);
-    console.log('State:', state);
-    console.log('City:', city);
-    console.log('Zip:', zip);
-
-    // Check if any fields are null or empty
-    if (!name || !facultyId || !email || !phone || !address || !state || !city || !zip) {
-        alert("Please fill in all required fields.");
-        return;
-    }
-
-    // Send the data via fetch to Flask, passing each field separately
-    fetch('/register', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: name,
-            facultyId: facultyId,
-            email: email,
-            phone: phone,
-            address: address,
-            landmark: landmark,
-            state: state,
-            city: city,
-            zip: zip
-        })
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.message) {
-            alert('Registration successful!');
-        } else {
-            alert('Error: ' + result.error);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred while submitting the form.');
-    });
-}

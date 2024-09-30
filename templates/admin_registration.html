@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_style.css') }}">
+    <style>
+        /* Registration Form */
+        .user-creation {
+            height: auto;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .face_registraion_form_conatiner {
+            border: none;
+            border-radius: 15px;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            width: 48%;
+            margin: 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 10px;
+            border: 1px solid rgb(206, 206, 206);
+            border-radius: 5px;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+
+        .form-row button {
+            width: 48%;
+            margin: 5px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2980b9;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2676ac;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('admin_panel') }}">Logo</a></li>
+            <li><a href="{{ url_for('admin_panel') }}">Create User</a></li>
+            <li><a href="{{ url_for('admin_announcement') }}">Announcement</a></li>
+            <li><a href="{{ url_for('admin_milestone') }}">Set Milestone</a></li>
+            <li><a href="{{ url_for('admin_lecture') }}">Create Lecture</a></li>
+            <li><a href="{{ url_for('admin_assignment') }}">Assignment</a></li>
+            <li><a href="{{ url_for('admin_registration') }}"class="active">Registration</a></li>
+            <li><a href="{{ url_for('admin_notification') }}">Notification</a></li>
+        </ul>
+
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="Profile Logo" class="profile-logo" id="profile-logo">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('login') }}">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- User Creation Form -->
+    <section class="user-creation">
+        <center><h2>Registration Form</h2></center>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="faculty-id">Faculty ID:</label>
+                    <input type="text" id="faculty-id" name="faculty-id" required placeholder="Faculty-ID" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Email" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Phone no." readonly>
+                </div>
+            </div>
+
+            <div class="address_name">
+                <center><h2>Address</h2></center>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="address">Flat/House No/Floor/Building:</label>
+                    <input type="text" id="address" name="address" required placeholder="Flat No. / House No. / Floor / Building" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="landmark">Nearby Landmark (optional):</label>
+                    <input type="text" id="landmark" name="landmark" placeholder="Landmark" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="state">State/Province:</label>
+                    <input type="text" id="state" name="state" required placeholder="State" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required placeholder="City" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip/Postal Code:</label>
+                    <input type="text" id="zip" name="zip" required placeholder="Zip/Postal code" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="submit">Accept</button>
+                <button type="submit">Reject</button>
+            </div>
+        </form>
+    </section>
+
+    <script type="text/javascript" src="admin.js"></script>
+
+</body>
+</html>
