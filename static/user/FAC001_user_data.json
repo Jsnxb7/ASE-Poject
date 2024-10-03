@@ -8,16 +8,5 @@
                 "fac_id": "FAC001"
             }
         ]
-    },
-    {
-        "name": "shourya",
-        "facultyId": "FAC001",
-        "email": "radz@gmsil.csm",
-        "phone": "8742980205",
-        "address": "mneaijfi",
-        "landmark": "miofsioenioen",
-        "state": "delhi",
-        "city": "delhi",
-        "zip": "110045"
     }
 ]

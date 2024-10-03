@@ -155,7 +155,7 @@ def register():
     data = request.get_json()
 
     name = data.get('name')
-    fac_id = data.get('facultyId')
+    fac_id = data.get('fac_id')
     email = data.get('email')
     phone = data.get('phone')
     address = data.get('address')
@@ -167,7 +167,7 @@ def register():
     # Prepare the user data as a dictionary
     user_data = {
         "name": name,
-        "facultyId": fac_id,
+        "fac_id": fac_id,
         "email": email,
         "phone": phone,
         "address": address,
@@ -178,7 +178,7 @@ def register():
     }
 
     # Define the file path
-    user_data_filename = f"{fac_id}_user_data.json"
+    user_data_filename = f"static/user/{fac_id}_user_data.json"
     user_data_filepath = os.path.join(user_data_filename)
 
     try:

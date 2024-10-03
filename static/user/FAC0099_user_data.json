@@ -1,10 +1,12 @@
-{
-    "users": [
-        {
-            "email": "fac99@example.com",
-            "password": "scrypt:32768:8:1$zr9N6r8zjJFrgCta$f1d78822aae20818327289a3b607205e0ebff71ecd067eff516cc03c788715776bc1226f0e76e33bdf6cee2aeb9ce2c94f53ce41b634c666bc1d6d2abafcb5cc",
-            "role": "faculty",
-            "fac_id": "FAC0099"
-        }
-    ]
-}
+[
+    {
+        "users": [
+            {
+                "email": "fac99@example.com",
+                "password": "scrypt:32768:8:1$zr9N6r8zjJFrgCta$f1d78822aae20818327289a3b607205e0ebff71ecd067eff516cc03c788715776bc1226f0e76e33bdf6cee2aeb9ce2c94f53ce41b634c666bc1d6d2abafcb5cc",
+                "role": "faculty",
+                "fac_id": "FAC0099"
+            }
+        ]
+    }
+]

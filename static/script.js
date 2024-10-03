@@ -202,3 +202,56 @@ toggleButton.addEventListener('click', function() {
         stopCamera(); // If an image has been captured, stop the camera
     }
 });
+
+function submitForm() {
+    // Gather form data
+    const name = document.getElementById('name').value;
+    console.log(name);
+    const fac_id = document.getElementById('fac_id').value;
+    console.log(fac_id);
+    const email = document.getElementById('email').value;
+    console.log(email);
+    const phone = document.getElementById('phone').value;
+    console.log(phone);
+    const address = document.getElementById('address').value;
+    console.log(address);
+    const landmark = document.getElementById('landmark').value;
+    console.log(landmark);
+    const state = document.getElementById('state').value;
+    console.log(state);
+    const city = document.getElementById('city').value;
+    console.log(city);
+    const zip = document.getElementById('zip').value;
+    console.log(zip);
+
+
+    // Send data to the server
+    fetch('/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name,
+            fac_id: fac_id,
+            email: email,
+            phone: phone,
+            address: address,
+            landmark: landmark,
+            state: state,
+            city: city,
+            zip: zip
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Registration successful!');
+        } else {
+            alert('Done');
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
