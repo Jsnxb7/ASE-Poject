@@ -3,11 +3,11 @@ from werkzeug.security import check_password_hash, generate_password_hash
 import os
 import json
 from functools import wraps
+import base64
 
-#helloa
+
+
 app = Flask(__name__)
-
-
 current_dir = os.getcwd()
 
 
@@ -298,5 +298,24 @@ def admin_notification():
 def admin_registration():
     return render_template("admin_registration.html")
 
+
+@app.route('/upload-image', methods=['POST'])
+def upload_image():
+    data = request.get_json()  # Get the JSON data from the request
+    image_data = data.get('imageData')
+    fac_id = data.get('fac_id')
+
+    # Remove the data URL prefix (data:image/png;base64,) before saving
+    if image_data.startswith('data:image/png;base64,'):
+        image_data = image_data.split(',')[1]
+
+    # Create a filename using fac_id
+    image_filename = f"static/user_images/image_{fac_id}.png"
+
+    # Save the image to a file
+    with open(image_filename, 'wb') as image_file:
+        image_file.write(base64.b64decode(image_data))
+
+    return jsonify({"message": "Image uploaded successfully!"}), 200
 if __name__ == '__main__':
     app.run(debug=True)

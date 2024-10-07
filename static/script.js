@@ -180,16 +180,40 @@ function captureImage() {
     // Get the image data URL
     const imageDataUrl = canvas.toDataURL('image/png');
 
-    // Create a timestamp for the file name
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-'); // Format timestamp
-    const link = document.createElement('a'); // Create a link element
-    link.href = imageDataUrl; // Set the link's href to the image data URL
-    link.download = `captured_image_${timestamp}.png`; // Set the download attribute with a filename
-    link.click(); // Simulate a click on the link to trigger the download
+    // Gather additional form data
+    const fac_id = document.getElementById('fac_id').value; // Get fac_id from input
 
-    console.log('Captured Image Data URL:', imageDataUrl); // Log the image data URL
+    // Send the image to the server
+    uploadImage(imageDataUrl, fac_id);
 }
 
+// Function to upload the image to the server
+function uploadImage(imageData, fac_id) {
+    // Remove the data URL prefix (data:image/png;base64,) before sending
+    if (imageData.startsWith('data:image/png;base64,')) {
+        imageData = imageData.split(',')[1];
+    }
+
+    // Send the image data to the Flask server
+    fetch('/upload-image', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ imageData, fac_id }), // Send the image data as JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
+            alert(data.message); // Display success message
+        } else {
+            alert('Image upload failed!'); // Handle error case
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
 // Toggle camera and capture image
 toggleButton.addEventListener('click', function() {
     if (cameraState === 'stopped') {
@@ -203,6 +227,10 @@ toggleButton.addEventListener('click', function() {
     }
 });
 
+
+
+
+// regis form
 function submitForm() {
     // Gather form data
     const name = document.getElementById('name').value;
